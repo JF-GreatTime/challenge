@@ -22,7 +22,7 @@
     <section id="bg_img">
         <section id="leader">
             <section class="bg">
-                <h1>宝宝余积分商城</h1>
+                <h1>积分商城</h1>
                 <p>welcome</p>
                 <p>欢迎进入商户端</p>
             </section>
