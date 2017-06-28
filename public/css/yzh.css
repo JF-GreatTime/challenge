@@ -1,0 +1,84 @@
+﻿@charset "utf-8";
+/*全局样式*/
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+body{font:12px/24px "宋体","微软雅黑",Arial,HELVETICA;color:#333;background:#fff;}
+fieldset,img{border:0;}
+img{vertical-align:middle;}
+ol,ul,li{list-style-type:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+button,input,select,textarea{font-size:100%;font-family:inherit;margin:0;outline:none;}
+
+.clearfix{clear:both;margin:0;padding:0;font-size:0px;line-height:0px;height:0px;overflow:hidden;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+*html .clearfix{zoom:1;}
+*+html .clearfix{zoom:1;}
+
+a{color:#333;text-decoration:none;outline:none;}
+a:focus{outline:none;}
+a:hover{text-decoration:none;}
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.pr{position:relative;}
+.oh{overflow:hidden;}
+
+
+/* 在线客服样式 */
+.kefuBox{position:fixed;z-index:1000;top:180px;right:0;width:auto; _position:absolute;_top: expression(documentElement.scrollTop +45);}
+.kefuBox .kefuLeft{float:left;overflow:hidden;width:30px;height: 157px;cursor:pointer;background:url(../images/kefu/kefu_l.png) no-repeat}
+.kefuBox .kefuRight{display:block;float:left;overflow:hidden;width:0;}
+.kefuBox .kefuTop{width:154px;height:46px;background:url(../images/kefu/kefu_top.png) no-repeat;}
+.kefuBox .kefuClose{float:right;overflow:hidden;width:154px; height:46px;display:block;cursor:pointer;}
+.kefuBox .kefuBottom{width:154px;height:12px;background:url(../images/kefu/kefu_bottom.png) no-repeat;}
+.kefuBox .kefuCont{width:130px;padding:0 12px;background:url(../images/kefu/kefu_line.png) repeat-y;overflow:hidden;}
+.kefuBox .kefuCont ul{margin:0;padding:0;}
+.kefuBox .kefuCont ul li{width:80px;line-height:28px;overflow:hidden;height:28px;padding-left:40px;padding-right:10px;text-overflow:ellipsis;white-space:nowrap;margin-bottom:5px;}
+.kefuBox .kefuCont ul li a{color:#333;}
+.kefuBox .kefuCont ul li.pic{width:130px;height:89px;margin-bottom:10px;padding:0;}
+.kefuBox .kefuCont ul li.qq{background:url(../images/kefu/qq.png) no-repeat;}
+.kefuBox .kefuCont ul li.wang{background:url(../images/kefu/wangwang.png) no-repeat}
+.kefuBox .kefuCont ul li.spk{background:url(../images/kefu/skype.png) no-repeat}
+.kefuBox .kefuCont ul li.codeer{display:block;width:130px;height: 165px;text-align:center;color:#fff;padding:10px 0 0;font-family:"微软雅黑";font-size:14px;margin-bottom:0;}
+.kefuBox .kefuCont ul li.codeer p{display:block;height:35px;line-height:35px;}
+.kefuBox .kefuCont ul li.codeer span{display:block;width:116px;height:116px;padding:7px;background:url(../images/kefu/cobj.png) no-repeat;}
+.kefuBox .kefuCont ul li.codeer span img{width:116px;height:116px;}
+
+/*分页样式*/
+.pagination{padding:25px 0 15px;text-align:center;overflow:hidden;}
+.pagination a{font-size:12px;line-height:30px;display:inline-block;height:30px;padding:0 12px;text-align:center;color:#333;border: 1px solid #e3e3e3;background:#fff;margin:0 5px;border-radius:2px;}
+.pagination a.a1{line-height:30px;height:30px;margin-top:0;padding:0 12px;}
+.pagination a:hover{text-decoration:none;color:#000;background:#f1f1f1;}
+.pagination span{line-height:30px;display:inline-block;height:30px;padding:0 12px;text-align:center;color:#fff;border:1px solid #e5007f;background:#e5007f;margin:0 5px;border-radius:2px;}
+
+/* 内页留言样式 */
+.feedbackT{width:600px;margin:0 auto;font-size:16px;color:#333;}
+.feedbackC{width:600px;margin:20px auto 0;}
+.feedbackTable tr{height: 40px;}
+.feedbackTable .inputLabel{font-size:14px;line-height:20px;width:80px; height:20px;padding:5px;vertical-align:top;}
+.feedbackTable .inputText{line-height:28px;width:400px;height:28px; margin-bottom:15px;font-size:14px;border:1px solid #ccc;background:#fff;padding:0 5px;}
+.feedbackTable .inputTextarea{width:470px;height:210px;margin-bottom: 15px;padding:5px;border:1px solid #ccc;background:#fff;padding-left:5px;display:block;}
+.feedbackTable .inputVerifycode{line-height:28px;width:100px;height:28px;margin-bottom:15px;padding:0 5px;border:1px solid #ccc;background:#fff;float:left;}
+.feedbackTable .inputText:focus,.feedbackTable .inputTextarea:focus,.feedbackTable .inputVerifycode:focus{border-color:#e5007f; outline:0;}
+.feedbackTable .checkcode{width:50px;height:22px;margin-left:5px;border:1px solid #ccc;padding:3px 5px;display:block;float:left;}
+.feedbackTable .btn{font-size:18px;line-height:35px;display:block; float:left;width:110px;height:35px;margin-right:15px;cursor: pointer;text-align:center;color:#fff;border:0;background:#333;border-radius:2px}
+.feedbackTable .btn:hover{background:#e5007f;}
+
+/*---网站地图---*/
+.yzh-map-main { overflow: hidden; margin: 10px 0; padding-bottom:35px; background: #fff;font-family:"宋体"; }
+.yzh-map-main .sitemap_con { width:845px; margin: 0 auto; color:#666; }
+.yzh-map-main .sitemap_con .map_top { border-bottom: 2px solid #555; margin-bottom:35px;}
+.yzh-map-main .sitemap_con .map_top img { float: left; }
+.yzh-map-main .site_r_link { width: 120px;margin-top:35px;/*上边界根据需要进行调整*/ padding: 5px 10px; background: #f8f8f8;text-align:center;background:#555;color:#fff;}
+.yzh-map-main .site_r_link a{color:#fff;}
+.yzh-map-main .site_r_link a:hover{text-decoration:underline;}
+
+
+/*站点地图，显示方式样式，上边界根据需要进行调整*/
+.yzh-map-main .site_plc { padding: 5px 0; text-indent: 10px; background: url(../images/ico-plus.gif) no-repeat 0 8px; }
+.yzh-map-main .sitemap_con h4 { line-height:35px;border-bottom:1px dotted #ccc;font-size:15px;margin-bottom:5px;font-family:"微软雅黑";}
+.yzh-map-main .b4 {margin-bottom:20px;}
+.yzh-map-main .b4 ul {}
+.yzh-map-main .b4 li {line-height:30px; width:155px;float:left;background:url(../images/icona.jpg) no-repeat left center;padding-left:14px;}
+
+/*百度地图样式*/
+#baidu-map {width:823px;height:450px;border:#ccc solid 1px;margin-top:20px;}
