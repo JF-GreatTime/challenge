@@ -1,0 +1,71 @@
+<form id="feedback_form" name="form" action="{:U('Feedback/insert')}" method="post">
+	<input type="hidden"  name="lang" value="{$langid}" />
+	<input name="verify_status" value="1" type="hidden">
+	<table class="feedbackTable" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td class="inputLabel">姓名：</td>
+			<td>
+				<input name="uname" type="text" maxlength="50" id="name" class="inputText"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="inputLabel">主题：</td>
+			<td>
+                <input name="title" id="name" type="text" maxlength="50" class="inputText"/>
+            </td>
+		</tr>
+		<tr>
+			<td class="inputLabel">电话：</td>
+			<td><input name="tel" type="text" maxlength="20" id="mobile" class="inputText"/></td>
+		</tr>
+		<tr>
+			<td class="inputLabel">邮箱：</td>
+			<td><input name="email" type="text" maxlength="50" id="email" class="inputText"/></td>
+		</tr>
+		<tr>
+			<td class="inputLabel">内容：</td>
+			<td>
+				<textarea name="content" id="content" class="inputTextarea"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td class="inputLabel">验证码：</td>
+			<td>
+				<input name="verifyCode" type="text" maxlength="20" class="inputVerifycode" />
+				<img id="verifyImage" class="checkcode" align="absmiddle" title="Click the refresh verification code" onclick="javascript:resetVerifyCode(this);" src="/index.php?m=index&a=verify">
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+				<input class="btn" type="submit" value="提 交" id="submit" />
+				<input class="btn" type="reset" value="重 置" />
+			</td>
+		</tr>
+	</table>
+</form>
+
+<script type="text/javascript">
+
+$("#feedback_form").submit(function () {
+    var self = $(this);
+    $.post(self.attr("action"), self.serialize(), success, "json");
+    return false;
+
+
+    function success(data) {
+      if (data.status) {
+          op_success('欢迎回来，页面正在跳转，请稍候。', '温馨提示');
+          setTimeout(function () {
+              window.location.href = data.url;
+          }, 1500);
+      } else {
+          op_error(data.info, '温馨提示');
+          //self.find(".Validform_checktip").text(data.info);
+          //刷新验证码
+          $(".reloadverify").click();
+      }
+    }
+});
+
+</script>

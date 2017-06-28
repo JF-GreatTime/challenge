@@ -1,0 +1,71 @@
+<extend name="Public:common"/>
+
+<block name="main">
+<div class="qmtMain">
+    <div class="w1150">
+        <include file="Public:title"/>
+        <div class="mainBj">
+        	<div class="mediaSlide fl">
+				<div class="hd">
+					<ul>
+						<li>1</li>
+						<volist name="pics" id="r" key="i">
+						<li>{$i+1}</li>
+						</volist>
+					</ul>
+				</div>
+				<div class="bd">
+					<ul>
+						<li><a href="javascript:;"><img src="{$thumb}"></a></li>
+                        <volist name="pics" id="r">
+                        {if !empty($r[filepath])}
+                        <li><a href="javascript:;"><img src="{$r[filepath]}"></a></li>
+                        {/if}
+                        </volist>
+					</ul>
+				</div>
+        	</div>
+        	<div class="mediaTitle fl">
+        		<h2>{$title}</h2>
+        		<h3>{$keywords}</h3>
+        		<p><span>城市地区：{$area}</span></p>
+				<p class="yj">媒体原价：{$price}</p>
+				<p><span><font>促销价格：{$sales}</span></font></p>
+        		<p><span>促销方式：{$species}</span></p>
+				<p>促销说明：{$description|str_cut=###,160}</p>
+        	</div>
+        	<div class="clearfix"></div>
+        	<div class="mediaShow">
+				<div class="mediaR" style="width:100%;">
+					<div class="meA">
+						<div id="mA" class="title"><span>媒体介绍</span></div>
+						<div class="box">{$content}</div>
+					</div>
+					<div class="meA">
+						<div id="mB" class="title"><span>媒体参数</span></div>
+						<div class="box">{$content1}</div>
+					</div>
+					<div class="meA">
+						<div id="mC" class="title"><span>相同类别媒体</span></div>
+						<div class="meAcx">
+							<ul>
+			                    <Gr:list catid="4" field="title,url,thumb,price,sales" limit="4" id="r">
+			                    <li>
+			                        <a href="{$r.url}"><img width="260" height="215" src="{$r.thumb}"></a>
+			                        <h3>地点：{$r.title}</h3>
+			                        <span class="yj">原价：{$r.price}</span>
+			                        <span class="cxj">促销价：{$r.sales}</span>
+			                    </li>
+			                    </Gr:list>
+			                </ul>
+						</div>
+					</div>
+				</div>
+        	</div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+jQuery(".mediaSlide").slide({mainCell:".bd ul",effect:"leftLoop",autoPlay:true,interTime:4000});
+</script>
+</block>

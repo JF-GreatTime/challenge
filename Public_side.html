@@ -1,0 +1,9 @@
+<div class="mediaSide fl">
+    <h2>{$max_parent_catname}</h2>
+    <ul>
+    	<Gr:subcat catid="$max_parent_catid" id="r" key="i">
+	    <li><a class="{if $catid==$r['id']}active{/if}" href="{$r.url}" title="{$r.catname}">{$r.catname}</a>
+	    </li>
+	    </Gr:subcat>
+    </ul>
+</div>

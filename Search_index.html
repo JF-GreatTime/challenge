@@ -1,0 +1,74 @@
+﻿<extend name="Public:common"/>
+
+<block name="main">
+<script type="text/javascript">
+    window.setTimeout(function () {
+        $("html,body").animate({ scrollTop: 735 }, 800);
+    }, 1000);
+</script>
+<div class="qmtMain">
+    <div class="w1150">
+        <div class="qmtTitle">搜索结果：<a href="{:URL()}">{:L(home_font)}</a> >&nbsp;{$r.keyword}</div>
+        <div class="mainBj" style="margin-bottom:0">
+            <include file="Public:search"/>
+            <div class="qmtInfo">
+                <img src="__IMG__/dt.jpg"/>
+                <p>全媒通是一家具有战略前瞻思想和深厚内涵的文化传媒企业。凭借创新的商业模式、强大的执行力和高效的产业链，迅速成为传媒行业全媒体运营的佼佼者。她致力于媒体大数据的研发，广告投放精准系统的构建，以人为本的精细服务，长期为广告主提供全面、精准、卓越的广告发布解决方案。<br/>
+                 国内唯一媒体广告资源平台交互式运作模式<br/>
+                 海量媒体产品实现用户需求与广告精准匹配<br/>
+                 为客户提供个性化精准投放方案<br/>
+                 全媒体广告投放解决方案提供商
+                </p>
+            </div>
+        </div>
+        <div class="mainBj mt20">
+            <div class="mediaSearch fl">
+                {if $list}
+                <ul>
+                    <volist name="list" id="r">
+                    <li><a title="{$r.title}" href="{$r.url}"><img width="258" height="209" src="{$r.thumb}" alt="{$r.title}">
+                        <span class="spanBox">{$r.title}</span>
+                    </a></li>
+                    </volist>
+                </ul>
+                {else}
+                对不起，没有找到您要的结果
+                {/if}
+                <div class="clearfix"></div>
+                <div class="pagination">{$pages}</div> 
+            </div>
+            <div class="mediaRight fr">
+                <div class="recHot">
+                    <h2>热门推荐</h2>
+                    <div class="bd">
+                        <ul>
+                            <Gr:list catid="1" id="r" field="url,title,thumb" limit="30" posid="1" key="i">
+                            <li><a title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="235" height="191" src="{$r.thumb}"><span class="spanBox">{$r.title}</span></a></li>
+                            </Gr:list>
+                        </ul>
+                    </div>
+                </div>
+                <div class="recHot mt20">
+                    <h2>媒体资讯</h2>
+                    <div class="news">
+                        <Gr:list catid="7" id="r" field="url,title,createtime" limit="5" posid="1" key="i">
+                        <li><a title="{$r.title}" title="{$r.title}" href="{$r.url}">{$r.title}</a><span>{$r.createtime|toDate=###,'m/d'}</span></li>
+                        </Gr:list>
+                    </div>
+                </div>
+                <div class="recHot mt20">
+                    <h2>关于全媒通</h2>
+                    <div class="qmtAd">
+                        <a href="/"><img src="__IMG__/qmt.jpg">
+                        <span>做广告，就选全媒通</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+jQuery(".recHot").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:2,interTime:35});
+</script>
+</block>

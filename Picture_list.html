@@ -1,0 +1,43 @@
+<extend name="Public:common"/>
+
+<block name="main">
+<div class="qmtMain">
+    <div class="w1150">
+        <include file="Public:title"/>
+        <div class="mainBj">
+			<include file="Public:search"/>
+			<include file="Public:side"/>
+			<div class="mediaContent fr">
+				<div class="title">{$catname}</div>
+				<div class="mediaList">
+					{if $list}
+					<ul>
+                    	<volist name="list" id="r">
+						<li>
+							<a target="_blank" title="{$r.title}" class="pic" href="{$r.url}"><img width="220" height="178"  alt="{$r.title}" src="{$r.thumb}"></a>
+							<div class="txt">
+								<h3><a target="_blank" title="{$r.title}" href="{$r.url}">{$r.title|str_cut=###,60}</a></h3>
+								<p><span>城市地区：{$r.area}</span></p>
+								<p><span>发布周期：{$r.species}</span></p>
+								<p>
+									<span>免费咨询热线：<font>{$site_tel400}</font></span>
+								  	<span>刊列价：{$r.price}</span>
+								</p>
+								<p>媒体概述：{$r.description|str_cut=###,80}
+								</p>
+								<a target="_blank" class="more" href="{$r.url}">查看更多</a>
+							</div>
+						</li>
+						</volist>
+					</ul>
+                    {else}
+                    {$catname}
+                    {/if}
+				</div>
+				<div class="clearfix"></div>
+                <div class="pagination">{$pages}</div>
+			</div>
+        </div>
+    </div>
+</div>
+</block>

@@ -1,0 +1,27 @@
+<extend name="Public:common"/>
+
+<block name="main">
+<div class="qmtMain">
+    <div class="w1150">
+        <include file="Public:title"/>
+        <div class="mainBj">
+            <div class="mediaCase">
+                {if $list}
+                <ul>
+                    <volist name="list" id="r">
+                    <li>
+                        <a title="{$r.title}" href="{$r.url}"><img width="260" height="169" alt="{$r.title}" src="{$r.thumb}"></a>
+                        <h3>{$r.title}</h3>
+                    </li>
+                    </volist>
+                </ul>
+                {else}
+                {$catname}
+                {/if}
+            </div>
+            <div class="clearfix"></div>
+            <div class="pagination">{$pages}</div>
+        </div>
+    </div>
+</div>
+</block>

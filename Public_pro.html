@@ -1,0 +1,55 @@
+<!-- 左侧栏目 -->
+<div class="aside fl">
+    <div class="card">
+        <div class="card-header">{$max_parent_catname}</div>
+        <ul>
+            <Gr:subcat catid="$max_parent_catid" id="r" key="i">
+                <li><a class="{if $catid==$r['id'] || $max_parent_catid==$r['id']}active{/if}" href="{$r.url}" title="{$r.catname}">{$r.catname}</a>
+                    {if $r['child']=="1"}
+                    <ol {if $catid==$r['id'] || $r['id']==$Cats[$catid][parentid] || $r['id']==$Cats[$parentid][parentid]} style="display: block;"{else}style="display: none;"{/if}>
+                    <Gr:subcat catid="$r['id']" id="rr" key='ii'>
+                        <li><a class="{if $catid==$rr['id']}active{/if}" href="{$rr.url}" title="{$rr.catname}">{$rr.catname}</a>
+                            {if $rr['child']=="1"}
+                            <ul {if $catid==$rr['id']} style="display: block;"{elseif $rr['id']==$Cats[$catid][parentid]}style="display: block;"{else}style="display: none;"{/if}>
+                            <Gr:subcat catid="$rr['id']" id="rrr" key='ii'>
+                                <li><a href="{$rrr.url}">{$rrr.catname}</a></li>
+                            </Gr:subcat>
+        </ul>
+        {/if}
+        </li>
+        </Gr:subcat>
+        </ol>
+        {/if}
+        </li>
+        </Gr:subcat>
+        </ul>
+    </div>
+    <div class="card">
+        <div class="card-header">推荐产品</div>
+        <div class="card-block">
+            <ul>
+                <gr:list catid="3" field="thumb,title,url" id="r">
+                    <li><a href="{$r.url}"><img width="186" height="186" src="{$r.thumb}"/><span>{$r.title}</span></a></li>
+                </gr:list>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header"><h2>联系我们</h2></div>
+        <div class="card-block">
+            <h3>全国咨询热线：<span>{$site_tel400}</span></h3>
+            <p>
+                公司名称：{$site_name}<br/>
+                电话：{$site_telephone}<br/>
+                传真：{$site_fax}<br/>
+                手机：{$site_phone}&nbsp;&nbsp;{$site_lxr}<br/>
+                邮箱：{$site_email}<br/>
+                地址：{$site_address}
+            </p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(".sidebarTwo").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:1,interTime:30});
+</script>

@@ -1,0 +1,14 @@
+<div class="qmtSide fl">
+    <div class="sideMenu">
+        <h2>{$max_parent_catname}</h2>
+        <ul>
+            <Gr:subcat catid="$max_parent_catid" id="r" key="i">
+            <li><a class="{if $catid==$r['id']}active{/if}" href="{$r.url}" title="{$r.catname}">{$r.catname}</a>
+            </li>
+            </Gr:subcat>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+jQuery(".recHot").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:2,interTime:35});
+</script>

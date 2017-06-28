@@ -1,0 +1,19 @@
+<extend name="Public:common"/>
+
+<block name="main">
+<div class="qmtMain">
+    <div class="w1150">
+        <include file="Public:title"/>
+        <div class="mainBj">
+            <include file="Public:left"/>
+            <div class="qmtContent fr">
+				{if $content}
+	                {$content}
+	            {else}
+	                {$catname}
+	            {/if}
+            </div>
+        </div>
+    </div>
+</div>
+</block>

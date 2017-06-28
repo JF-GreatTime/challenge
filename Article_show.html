@@ -1,0 +1,42 @@
+<extend name="Public:common"/>
+
+<block name="main">
+<div class="qmtMain">
+    <div class="w1150">
+        <include file="Public:title"/>
+        <div class="mainBj">
+            <include file="Public:left"/>
+            <div class="qmtContent fr">
+                <div class="newsShow">
+                    <h2>{$title}</h2>
+                    <h3><span>文章来源：{if $copyfrom}{$copyfrom}{else}本站{/if}</span><span>人气：{$hits}</span><span>发表时间：{$createtime|toDate=###,'Y-m-d H:i:s'}</span><span class="fontResizer">【<a href="javascript:void(0);" class="smallFont">小</a><a href="javascript:void(0);" class="medFont">中</a><a href="javascript:void(0);" class="largeFont">大</a>】</span></h3>
+                    <div class="newsShowBox fontsizebox">
+                       {$content}
+                    </div>
+                </div>
+                <!-- 上下篇 -->
+                <div class="fenyList">
+                    <div class="prew">{if $prea}上一篇：<a href="{$prea.url}">{$prea.title}</a>{else}<a>上一篇：无</a>{/if}</div>
+                    <div class="nextw">{if $next}下一篇：<a href="{$next.url}">{$next.title}</a>{else}<a>下一篇：无</a>{/if}</div>
+                </div>
+                <div class="clearfix"></div>
+                <!-- 推荐资讯 -->
+                <div class="recNews">
+                    <div class="recTitle">推荐资讯</div>
+                    <ul>
+                        <Gr:list catid="catid" field="id,title,createtime,url" limit="12">
+                    <li><a title="{$r.title}" href="{$r.url}">{$r.title}</a><span>{$r.createtime|toDate=###,'Y-m-d'}</span></li>
+                  </Gr:list>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="__JS__/newsfont.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    fontResizer('12px','14px','16px');
+});
+</script>
+</block>
