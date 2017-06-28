@@ -1,125 +1,195 @@
 <extend name="Public:common"/>
 
 <block name="main">
-<script type="text/javascript">
-//导航跟随置顶
-$(function(){
-    var top=$('.mediaL').position().top;
-    $(document).scroll(function(e){
-        if($(document).scrollTop()>=top){
-            $('.mediaL').css({position:'fixed',top:0})
-        }else{
-            $('.mediaL').css({position:'static'});
+	<script type="text/javascript">
+		//导航跟随置顶
+		$(function(){
+			var top=$('.mediaL').position().top;
+			/*$(document).scroll(function(e){
+			 if($(document).scrollTop()>=top){
+			 $('.mediaL').css({position:'fixed',top:0})
+			 }else{
+			 $('.mediaL').css({position:'static'});
 
-        };
-    });
-});
-</script>
-<div class="qmtMain">
-    <div class="w1150">
-        <include file="Public:title"/>
-        <div class="mainBj">
-        	<div class="mediaSlide fl">
-				<div class="hd">
-					<ul>
-						<li>1</li>
-						<volist name="pics" id="r" key="i">
-						<li>{$i+1}</li>
-						</volist>
-					</ul>
-				</div>
-				<div class="bd">
-					<ul>
-						<li><a href="javascript:;"><img src="{$thumb}"></a></li>
-                        <volist name="pics" id="r">
-                        {if !empty($r[filepath])}
-                        <li><a href="javascript:;"><img src="{$r[filepath]}"></a></li>
-                        {/if}
-                        </volist>
-					</ul>
-				</div>
-        	</div>
-        	<div class="mediaTitle fl">
-        		<h2>{$title}</h2>
-        		<h3>{$keywords}</h3>
-        		<p><span>城市地区：{$area}</span></p>
-        		<p><span>发布周期：{$species}</span></p>
-				<p><span>刊例价格：{$price}</span></p>
-				<p><span>咨询热线：<font>{$site_tel400}</font></span></p>
-				<p>媒体概述：{$description|str_cut=###,260}</p>
-        	</div>
-        	<div class="clearfix"></div>
-        	<div class="mediaShow">
-				<div class="mediaL fl">
-					{if !empty($title1)}<h3><a href="#mA">{$title1}</a></h3>{/if}
-					{if !empty($title2)}<h3><a href="#mB">{$title2}</a></h3>{/if}
-					{if !empty($title3)}<h3><a href="#mC">{$title3}</a></h3>{/if}
-					{if !empty($title4)}<h3><a href="#mD">{$title4}</a></h3>{/if}
-					{if !empty($title5)}<h3><a href="#mE">{$title5}</a></h3>{/if}
-					{if !empty($title6)}<h3><a href="#mF">{$title6}</a></h3>{/if}
-					{if !empty($title7)}<h3><a href="#mG">{$title7}</a></h3>{/if}
-					{if !empty($title8)}<h3><a href="#mH">{$title8}</a></h3>{/if}
-					{if !empty($title9)}<h3><a href="#mI">{$title9}</a></h3>{/if}
-					{if !empty($title10)}<h3><a href="#mJ">{$title10}</a></h3>{/if}
-					{if !empty($title11)}<h3><a href="#mK">{$title11}</a></h3>{/if}
-					{if !empty($title12)}<h3><a href="#mL">{$title12}</a></h3>{/if}
+			 };
+			 });*/
+			/*20170605*/
+			var sUserAgent = navigator.userAgent.toLowerCase();
+			var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+			var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+			var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+			var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+			var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+			var bIsAndroid = sUserAgent.match(/android/i) == "android";
+			var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+			var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
 
+/*                       var sn=$('.qmtFooter').offset().top-40;
+                       var oHeight=$(".mediaShow").height();*/
+			$(document).scroll(function(e){
+				if($(document).scrollTop()>=top){
+                                        var oheight=$(document).scrollTop();
+					if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+					}else{
+						$('.mediaL').css({position:'fixed',top:'60px'})
+                     /*if(sn-oheight<oHeight){
+                        $('.mediaL').css({position:'absolute',bottom:0,top:""});
+                    }else{
+                        $('.mediaL').css({position:'fixed',top:"60px",bottom:0});
+                    }*/
+					}
+				}else{
+					$('.mediaL').css({position:'static'});
+                
+				};
+			});
+		});
+	</script>
+	<div class="qmtMain">
+		<div class="w1150">
+			<include file="Public:title"/>
+			<div class="mainBj">
+				<div class="mediaSlide fl">
+					<div class="hd">
+						<ul>
+							<li>1</li>
+							<volist name="pics" id="r" key="i">
+								<li>{$i+1}</li>
+							</volist>
+						</ul>
+					</div>
+					<div class="bd">
+						<ul>
+							<li><a href="javascript:;"><img src="{$thumb}"></a></li>
+							<volist name="pics" id="r">
+								{if !empty($r[filepath])}
+								<li><a href="javascript:;"><img src="{$r[filepath]}"></a></li>
+								{/if}
+							</volist>
+						</ul>
+					</div>
 				</div>
-				<div class="mediaR fr">
-					{if !empty($title1)}<div class="meA">
+				<div class="mediaTitle fl">
+					<h2>{$title}</h2>
+					<h3>{$keywords}</h3>
+					<p><span>城市地区：{$area}</span></p>
+					<p><span>发布周期：{$species}</span></p>
+					<p><span>刊例价格：{$price}</span></p>
+					<p><span>咨询热线：<font>{$site_tel400}</font></span></p>
+					<p>媒体概述：{$description|str_cut=###,260}</p>
+				</div>
+				<div class="clearfix"></div>
+				<div class="mediaShow">
+					<div class="mediaL fl">
+						<h3><a href="#mA" name="B" class="mediaLA">全部展开</a></h3>
+						{if !empty($title1)}<h3><a href="#mA" name="A" >{$title1}</a></h3>{/if}
+						{if !empty($title2)}<h3><a href="#mB">{$title2}</a></h3>{/if}
+						{if !empty($title3)}<h3><a href="#mC">{$title3}</a></h3>{/if}
+						{if !empty($title4)}<h3><a href="#mD">{$title4}</a></h3>{/if}
+						{if !empty($title5)}<h3><a href="#mE">{$title5}</a></h3>{/if}
+						{if !empty($title6)}<h3><a href="#mF">{$title6}</a></h3>{/if}
+						{if !empty($title7)}<h3><a href="#mG">{$title7}</a></h3>{/if}
+						{if !empty($title8)}<h3><a href="#mH">{$title8}</a></h3>{/if}
+						{if !empty($title9)}<h3><a href="#mI">{$title9}</a></h3>{/if}
+						{if !empty($title10)}<h3><a href="#mJ">{$title10}</a></h3>{/if}
+						{if !empty($title11)}<h3><a href="#mK">{$title11}</a></h3>{/if}
+						{if !empty($title12)}<h3><a href="#mL">{$title12}</a></h3>{/if}
+
+					</div>
+					<!--reJ-->
+					<div class="mediaR fr">
+						{if !empty($title1)}<div class="meA reJ meAblock">
 						<div id="mA" class="title"><span>{$title1}</span></div>
 						<div class="box">{$content1}</div>
 					</div>{/if}
-					{if !empty($title2)}<div class="meA">
+						{if !empty($title2)}<div class="meA reJ meAblock">
 						<div id="mB" class="title"><span>{$title2}</span></div>
 						<div class="box">{$content2}</div>
 					</div>{/if}
-					{if !empty($title3)}<div class="meA">
+						{if !empty($title3)}<div class="meA reJ meAblock">
 						<div id="mC" class="title"><span>{$title3}</span></div>
 						<div class="box">{$content3}</div>
 					</div>{/if}
-					{if !empty($title4)}<div class="meA">
+						{if !empty($title4)}<div class="meA reJ meAblock">
 						<div id="mD" class="title"><span>{$title4}</span></div>
 						<div class="box">{$content4}</div>
 					</div>{/if}
-					{if !empty($title5)}<div class="meA">
+						{if !empty($title5)}<div class="meA reJ meAblock">
 						<div id="mE" class="title"><span>{$title5}</span></div>
 						<div class="box">{$content5}</div>
 					</div>{/if}
-					{if !empty($title6)}<div class="meA">
+						{if !empty($title6)}<div class="meA reJ meAblock">
 						<div id="mF" class="title"><span>{$title6}</span></div>
 						<div class="box">{$content6}</div>
 					</div>{/if}
-					{if !empty($title7)}<div class="meA">
+						{if !empty($title7)}<div class="meA reJ meAblock">
 						<div id="mG" class="title"><span>{$title7}</span></div>
 						<div class="box">{$content7}</div>
 					</div>{/if}
-					{if !empty($title8)}<div class="meA">
+						{if !empty($title8)}<div class="meA reJ meAblock">
 						<div id="mH" class="title"><span>{$title8}</span></div>
 						<div class="box">{$content8}</div>
 					</div>{/if}
-					{if !empty($title9)}<div class="meA">
+						{if !empty($title9)}<div class="meA reJ meAblock">
 						<div id="mI" class="title"><span>{$title9}</span></div>
 						<div class="box">{$content9}</div>
 					</div>{/if}
-					{if !empty($title10)}<div class="meA">
+						{if !empty($title10)}<div class="meA reJ meAblock">
 						<div id="mJ" class="title"><span>{$title10}</span></div>
 						<div class="box">{$content10}</div>
 					</div>{/if}
-					{if !empty($title11)}<div class="meA">
+						{if !empty($title11)}<div class="meA reJ meAblock">
 						<div id="mK" class="title"><span>{$title11}</span></div>
 						<div class="box">{$content11}</div>
 					</div>{/if}
-					{if !empty($title12)}<div class="meA">
+						{if !empty($title12)}<div class="meA reJ meAblock">
 						<div id="mL" class="title"><span>{$title12}</span></div>
 						<div class="box">{$content12}</div>
 					</div>{/if}
+					</div>
 				</div>
-        	</div>
-        </div>
-    </div>
-</div>
-<script type="text/javascript">
-jQuery(".mediaSlide").slide({mainCell:".bd ul",effect:"leftLoop",autoPlay:true,interTime:4000});
-</script>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		jQuery(".mediaSlide").slide({mainCell:".bd ul",effect:"leftLoop",autoPlay:true,interTime:4000});
+	</script>
+	<!--reJ20170531-->
+	<script type="text/javascript">
+		$('.mediaL a').click(function(){
+			$(".meA").removeClass("meAblock");
+			$('.mediaL a').removeClass("mediaLA");
+			$(this).addClass("mediaLA");
+			var otitle=$(this).attr("href");
+			if(otitle=="#mA"){
+				if($(this).attr("name")=="A"){
+					$(".meA").eq(0).addClass("meAblock");
+				}else{
+					$(".meA").addClass("meAblock");
+				}
+			}else if(otitle=="#mB"){
+				$(".meA").eq(1).addClass("meAblock");
+			}else if(otitle=="#mC"){
+				$(".meA").eq(2).addClass("meAblock");
+			}else if(otitle=="#mD"){
+				$(".meA").eq(3).addClass("meAblock");
+			}else if(otitle=="#mE"){
+				$(".meA").eq(4).addClass("meAblock");
+			}else if(otitle=="#mF"){
+				$(".meA").eq(5).addClass("meAblock");
+			}else if(otitle=="#mG"){
+				$(".meA").eq(6).addClass("meAblock");
+			}else if(otitle=="#mH"){
+				$(".meA").eq(7).addClass("meAblock");
+			}else if(otitle=="#mI"){
+				$(".meA").eq(8).addClass("meAblock");
+			}else if(otitle=="#mJ"){
+				$(".meA").eq(9).addClass("meAblock");
+			}else if(otitle=="#mK"){
+				$(".meA").eq(10).addClass("meAblock");
+			}else if(otitle=="#mL"){
+				$(".meA").eq(11).addClass("meAblock");
+			}
+		});
+	</script>
 </block>

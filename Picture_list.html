@@ -14,7 +14,7 @@
 					<ul>
                     	<volist name="list" id="r">
 						<li>
-							<a target="_blank" title="{$r.title}" class="pic" href="{$r.url}"><img width="220" height="178"  alt="{$r.title}" src="{$r.thumb}"></a>
+							<a target="_blank" title="{$r.title}" class="pic Jpic" href="{$r.url}"><p id="Jpicp">{$r.title}</p><img width="220" height="178"  alt="{$r.title}" src="{$r.thumb}"></a>
 							<div class="txt">
 								<h3><a target="_blank" title="{$r.title}" href="{$r.url}">{$r.title|str_cut=###,60}</a></h3>
 								<p><span>城市地区：{$r.area}</span></p>

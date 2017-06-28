@@ -1,367 +1,367 @@
 <extend name="Public:common"/>
 
 <block name="main">
-<div class="qmtHot">
+  <div class="qmtHot">
     <h2>做广告 就选全媒通</h2>
     <div class="search">
-        <form action="/?m=search" method="post">
+      <form action="/?m=search" method="post">
         <input name="module" value="picture" type="hidden">
-        <input type="text" value="请输入您要查找的媒体所在城市，如：深圳" class="text" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}" name="keyword">
+        <input type="text" value="请输入您要查找的媒体，如：北京地铁" class="text" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}" name="keyword">
         <input type="submit" value="" class="subt">
-        </form>
+      </form>
     </div>
     <div class="keyword">
-        热门搜索：
-        <Gr:list name="keyword" id="r" key="i" field="title,link">
+      热门搜索：
+      <Gr:list name="keyword" id="r" key="i" field="title,link">
         {if $i==1}{else}、{/if}<a href="{$r.link}">{$r.title}</a>
-        </Gr:list>
+      </Gr:list>
     </div>
-</div>
-<div class="qmtOdds">
-    <ul>
-        <li>
-            <h3>媒体资源覆盖全球</h3>
-            <a class="a1"></a>
-            <p>全媒通平台资源涵盖三大类数万种媒体产品，基<br/>
-                  本覆盖一二线城市和三四线重点城市以及域外发<br/>
-                  达国家，为广告主带来极大的便利和良好的体验。</p>
-        </li>
-        <li>
-            <h3>交易流程简单明了</h3>
-            <a class="a2"></a>
-            <p>广告主在页面上可随时查找适合自身的媒体产<br/>
-                  品，并通过线上线下咨询相关媒体价格、档期、<br/>
-                  投放流程、注意事项等，简单便捷，高效快速。</p>
-        </li>
-        <li>
-            <h3>底价成交广受欢迎</h3>
-            <a class="a3"></a>
-            <p>全媒通平台对媒体供应商审核苛严，确保100%<br/>
-                  一手资源，底价成交，不赚差价。切实为广告<br/>
-                 主提供专业的媒体服务，做好广告主的宣传顾问。</p>
-        </li>
-    </ul>
-</div>
-<div class="qmtProd" style="background:url(__IMG__/mt.jpg) no-repeat center top;">
+  </div>
+  <!--<div class="qmtOdds">
+      <ul>
+          <li>
+              <h3>媒体资源覆盖全球</h3>
+              <a class="a1"></a>
+              <p>全媒通平台资源涵盖三大类数万种媒体产品，基<br/>
+                    本覆盖一二线城市和三四线重点城市以及域外发<br/>
+                    达国家，为广告主带来极大的便利和良好的体验。</p>
+          </li>
+          <li>
+              <h3>交易流程简单明了</h3>
+              <a class="a2"></a>
+              <p>广告主在页面上可随时查找适合自身的媒体产<br/>
+                    品，并通过线上线下咨询相关媒体价格、档期、<br/>
+                    投放流程、注意事项等，简单便捷，高效快速。</p>
+          </li>
+          <li>
+              <h3>底价成交广受欢迎</h3>
+              <a class="a3"></a>
+              <p>全媒通平台对媒体供应商审核苛严，确保100%<br/>
+                    一手资源，底价成交，不赚差价。切实为广告<br/>
+                   主提供专业的媒体服务，做好广告主的宣传顾问。</p>
+          </li>
+      </ul>
+  </div>-->
+  <div class="qmtProd" style="background-color:#f5f5f5;">
     <div class="w1150">
-        <div class="prod">
-            <div class="hd hda">
-                <h2 class="jIcon">交通媒体</h2>
-                <ul>
-                    <Gr:subcat catid="1" id="r" key="i">
-                    <li class=" {if $i%2==0}none{/if}"><a target="_blank" href="{$r.url}">{$r.catname}</a></li>
-                    </Gr:subcat>
-                </ul>
-                <span></span>
-            </div>
-            <div class="bd bda">
-                <ul>
-                    <Gr:list catid="56" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>媒体：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-                <ul>
-                    <Gr:list catid="13" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>媒体：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-                <ul>
-                    <Gr:list catid="10" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>媒体：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-                <ul>
-                    <Gr:list catid="44" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>媒体：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-                <ul>
-                    <Gr:list catid="12" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>媒体：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-                <ul>
-                    <Gr:list catid="43" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>媒体：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-                <ul>
-                    <Gr:list catid="14" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>媒体：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-                <ul>
-                    <Gr:list catid="49" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>媒体：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-            </div>
+      <div class="prod">
+        <div class="hd hda">
+          <h2 class="jIcon">交通媒体</h2>
+          <ul>
+            <Gr:subcat catid="1" id="r" key="i">
+              <li class=" {if $i%2==0}none{/if}"><a target="_blank" href="{$r.url}">{$r.catname}</a></li>
+            </Gr:subcat>
+          </ul>
+          <span></span>
         </div>
-        <div class="prod">
-            <div class="hd hdb">
-                <h2 class="xIcon">新媒体</h2>
-                <ul>
-                    <Gr:subcat catid="2" id="r" key="i">
-                    <li class=" {if $i%2==0}none{/if}"><a target="_blank" href="{$r.url}">{$r.catname}</a></li>
-                    </Gr:subcat>
-                </ul>
-                <span></span>
-            </div>
-            <div class="bd bdb">
-                <ul>
-                    <Gr:list catid="15" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>媒体：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-                <ul>
-                    <Gr:list catid="16" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>地点：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-                <ul>
-                    <Gr:list catid="17" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>地点：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
+        <div class="bd bda">
+          <ul>
+            <Gr:list catid="56" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>媒体：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
+          <ul>
+            <Gr:list catid="13" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>媒体：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
+          <ul>
+            <Gr:list catid="10" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>媒体：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
+          <ul>
+            <Gr:list catid="44" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>媒体：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
+          <ul>
+            <Gr:list catid="12" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>媒体：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
+          <ul>
+            <Gr:list catid="43" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>媒体：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
+          <ul>
+            <Gr:list catid="14" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>媒体：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
+          <ul>
+            <Gr:list catid="49" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>媒体：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="hd hdc">
+          <h2 class="zIcon">综合媒体</h2>
+          <ul>
+            <Gr:subcat catid="3" id="r" key="i">
+              <li class=" {if $i%2==0}none{/if}"><a target="_blank" href="{$r.url}">{$r.catname}</a></li>
+            </Gr:subcat>
+          </ul>
+          <span></span>
+        </div>
+        <div class="bd bdc">
+          <ul>
+            <Gr:list catid="21" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>地点：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
+          <ul>
+            <Gr:list catid="20" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>地点：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
+          <ul>
+            <Gr:list catid="19" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>地点：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
+          <ul>
+            <Gr:list catid="50" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>地点：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
+          <ul>
+            <Gr:list catid="47" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>地点：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
+          <ul>
+            <Gr:list catid="51" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>地点：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
+          <ul>
+            <Gr:list catid="46" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>地点：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
+          <ul>
+            <Gr:list catid="22" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>地点：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="hd hdb">
+          <h2 class="xIcon">新媒体</h2>
+          <ul>
+            <Gr:subcat catid="2" id="r" key="i">
+              <li class=" {if $i%2==0}none{/if}"><a target="_blank" href="{$r.url}">{$r.catname}</a></li>
+            </Gr:subcat>
+          </ul>
+          <span></span>
+        </div>
+        <div class="bd bdb">
+          <ul>
+            <Gr:list catid="15" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>媒体：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
+          <ul>
+            <Gr:list catid="16" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>地点：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
+          <ul>
+            <Gr:list catid="17" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>地点：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
 
-                <ul>
-                    <Gr:list catid="45" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>地点：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-            </div>
+          <ul>
+            <Gr:list catid="45" field="title,url,thumb,species" limit="3" id="r" posid="1">
+              <li>
+                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <p><b>地点：</b>{$r.title}</p>
+                <p><b>发布周期：</b>{$r.species}</p>
+              </li>
+            </Gr:list>
+          </ul>
         </div>
-                <div class="prod">
-            <div class="hd hdc">
-                <h2 class="zIcon">综合媒体</h2>
-                <ul>
-                    <Gr:subcat catid="3" id="r" key="i">
-                    <li class=" {if $i%2==0}none{/if}"><a target="_blank" href="{$r.url}">{$r.catname}</a></li>
-                    </Gr:subcat>
-                </ul>
-                <span></span>
-            </div>
-            <div class="bd bdc">
-                <ul>
-                    <Gr:list catid="19" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>地点：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-                <ul>
-                    <Gr:list catid="46" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>地点：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-                <ul>
-                    <Gr:list catid="47" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>地点：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-                <ul>
-                    <Gr:list catid="50" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>地点：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-                <ul>
-                    <Gr:list catid="21" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>地点：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-                <ul>
-                    <Gr:list catid="20" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>地点：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-                <ul>
-                    <Gr:list catid="51" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>地点：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-                <ul>
-                    <Gr:list catid="22" field="title,url,thumb,species" limit="3" id="r" posid="1">
-                    <li>
-                        <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
-                        <p><b>地点：</b>{$r.title}</p>
-                        <p><b>发布周期：</b>{$r.species}</p>
-                    </li>
-                    </Gr:list>
-                </ul>
-            </div>
-        </div>
+      </div>
     </div>
-</div>
-<div class="qmtMedia w1150">
+  </div>
+  <div class="qmtMedia w1150">
     <h2><img src="__IMG__/mtbt.jpg" alt="媒体促销"></h2>
     <a class="prev"></a>
     <a class="next"></a>
     <div class="bd">
-        <ul>
-            <Gr:list catid="4" field="title,url,thumb,price,sales" limit="100" id="r" posid="1">
-            <li><a title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" src="{$r.thumb|thumb=###,246,203,1}"></a>
-                <h3>地点：{$r.title}</h3>
-                <span class="yj">原价：{$r.price}</span>
-                <span class="cxj">促销价：{$r.sales}</span>
-            </li>
-            </Gr:list>
-        </ul>
+      <ul>
+        <Gr:list catid="4" field="title,url,thumb,price,sales" limit="100" id="r" posid="1">
+          <li><a title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" src="{$r.thumb|thumb=###,246,203,1}"></a>
+            <h3>地点：{$r.title}</h3>
+            <span class="yj">原价：{$r.price}</span>
+            <span class="cxj">促销价：{$r.sales}</span>
+          </li>
+        </Gr:list>
+      </ul>
     </div>
     <a class="more" href="{$Cats[4][url]}"></a>
-</div>
-<div class="qmtCase">
+  </div>
+  <div class="qmtCase">
     <div class="w1150">
-        <h2><img src="__IMG__/ggbt.png"></h2>
-        <div class="video fl"><Gr:block pos="video"/></div>
-        <div class="case">
-            <ul>
-                <Gr:list catid="5" field="title,url,thumb" limit="4" id="r" posid="1">
-                <li><a title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" src="{$r.thumb|thumb=###,277,180,1}"><span>{$r.title}</span></a></li>
-                </Gr:list>
-            </ul>
-        </div>
-        <div class="clearfix"></div>
-        <a class="more" href="{$Cats[5][url]}"></a>
+      <h2><img src="__IMG__/ggbt.png" alt="广告案例"></h2>
+      <div id="Jvideo" class="video fl"><Gr:block pos="video"/></div>
+      <div class="case">
+        <ul>
+          <Gr:list catid="5" field="title,url,thumb" limit="4" id="r" posid="1">
+            <li><a title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" src="{$r.thumb|thumb=###,277,180,1}"><span>{$r.title}</span></a></li>
+          </Gr:list>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+      <a class="more" href="{$Cats[5][url]}"></a>
     </div>
-</div>
-<div class="qmtCustomize w1150">
-    <h2><img src="__IMG__/dz.jpg"></h2>
+  </div>
+  <div class="qmtCustomize w1150">
+    <h2><img alt="企业行销策划" src="__IMG__/dz.jpg"></h2>
     <a href="{$Cats[24][url]}"><img alt="行业预算定制" src="__IMG__/dz1.jpg"></a>
     <a class="a" href="{$Cats[25][url]}"><img alt="区域套餐定制" src="__IMG__/dz2.jpg"></a>
     <a class="a" href="{$Cats[26][url]}"><img alt="时节套餐定制" src="__IMG__/dz3.jpg"></a>
-</div>
-<div class="qmtNews">
+  </div>
+  <div class="qmtNews">
     <div class="w1150">
-        <div class="hd">
-            <ul>
-                <li>广告新闻资讯</li>
-                <li>广告媒体知识</li>
-                <li>广告业界数据</li>
-            </ul>
-        </div>
-        <div class="bd">
-            <ul>
-                <Gr:list catid="27" id="r" field="url,title,description,thumb" limit="4" posid="1" key="i">
-                <li><a title="{$r.title}" class="pic" href="{$r.url}"><img alt="{$r.title}" src="{$r.thumb|thumb=###,215,150,1}" width="215" height="150"></a>
-                    <div class="txt">
-                        <h3><a title="{$r.title}" href="{$r.url}">{$r.title}</a></h3>
-                        <p>{$r.description|str_cut=###,120}<br/><a href="{$r.url}">+了解详情</a></p>
-                    </div>
-                </li>
-                </Gr:list>
-            </ul>
-            <ul>
-                <Gr:list catid="28" id="r" field="url,title,description,thumb" limit="4" posid="1" key="i">
-               <li><a title="{$r.title}" class="pic" href="{$r.url}"><img alt="{$r.title}" src="{$r.thumb|thumb=###,215,150,1}" width="215" height="150"></a>
-                    <div class="txt">
-                        <h3><a title="{$r.title}" href="{$r.url}">{$r.title}</a></h3>
-                        <p>{$r.description|str_cut=###,120}<br/><a href="{$r.url}">+了解详情</a></p>
-                    </div>
-                </li>
-                </Gr:list>
-            </ul>
-            <ul>
-                <Gr:list catid="29" id="r" field="url,title,description,thumb" limit="4" posid="1" key="i">
-                <li><a title="{$r.title}" class="pic" href="{$r.url}"><img alt="{$r.title}" src="{$r.thumb|thumb=###,215,150,1}" width="215" height="150"></a>
-                    <div class="txt">
-                        <h3><a title="{$r.title}" href="{$r.url}">{$r.title}</a></h3>
-                        <p>{$r.description|str_cut=###,120}<br/><a href="{$r.url}">+了解详情</a></p>
-                    </div>
-                </li>
-                </Gr:list>
-            </ul>
-        </div>
-        <div class="clearfix"></div>
-        <a class="more" href="{$Cats[7][url]}"></a>
+      <div class="hd">
+        <ul>
+          <li>广告新闻资讯</li>
+          <li>广告媒体知识</li>
+          <li>广告业界数据</li>
+        </ul>
+      </div>
+      <div class="bd">
+        <ul>
+          <Gr:list catid="27" id="r" field="url,title,description,thumb" limit="4" posid="1" key="i">
+            <li><a title="{$r.title}" class="pic" href="{$r.url}"><img alt="{$r.title}" src="{$r.thumb|thumb=###,215,150,1}" width="215" height="150"></a>
+              <div class="txt">
+                <h3><a title="{$r.title}" href="{$r.url}">{$r.title}</a></h3>
+                <p>{$r.description|str_cut=###,120}<br/><a href="{$r.url}">+了解详情</a></p>
+              </div>
+            </li>
+          </Gr:list>
+        </ul>
+        <ul>
+          <Gr:list catid="28" id="r" field="url,title,description,thumb" limit="4" posid="1" key="i">
+            <li><a title="{$r.title}" class="pic" href="{$r.url}"><img alt="{$r.title}" src="{$r.thumb|thumb=###,215,150,1}" width="215" height="150"></a>
+              <div class="txt">
+                <h3><a title="{$r.title}" href="{$r.url}">{$r.title}</a></h3>
+                <p>{$r.description|str_cut=###,120}<br/><a href="{$r.url}">+了解详情</a></p>
+              </div>
+            </li>
+          </Gr:list>
+        </ul>
+        <ul>
+          <Gr:list catid="29" id="r" field="url,title,description,thumb" limit="4" posid="1" key="i">
+            <li><a title="{$r.title}" class="pic" href="{$r.url}"><img alt="{$r.title}" src="{$r.thumb|thumb=###,215,150,1}" width="215" height="150"></a>
+              <div class="txt">
+                <h3><a title="{$r.title}" href="{$r.url}">{$r.title}</a></h3>
+                <p>{$r.description|str_cut=###,120}<br/><a href="{$r.url}">+了解详情</a></p>
+              </div>
+            </li>
+          </Gr:list>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+      <a class="more" href="{$Cats[7][url]}"></a>
     </div>
-</div>
-<div class="qmtHot qmtSearch">
-    <h2>做广告 就选全媒通</h2>
-    <div class="search">
-        <form action="/?m=search" method="post">
-        <input name="module" value="picture" type="hidden">
-        <input type="text" value="请输入你要查找的媒体名称，如：深圳北" class="text" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}" name="keyword">
-        <input type="submit" value="" class="subt">
-        </form>
-    </div>
-</div>
-<script type="text/javascript">
-jQuery(".prod").slide({titCell:".hd li",mainCell:".bd",delayTime:0});
-jQuery(".qmtMedia").slide({mainCell:".bd ul",autoPlay:false,effect:"leftLoop",vis:4,interTime:4000});
-jQuery(".qmtNews").slide({titCell:".hd li",mainCell:".bd",delayTime:0});
-</script>
+  </div>
+  <!--<div class="qmtHot qmtSearch">
+      <h2>做广告 就选全媒通</h2>
+      <div class="search">
+          <form action="/?m=search" method="post">
+          <input name="module" value="picture" type="hidden">
+          <input type="text" value="请输入你要查找的媒体名称，如：深圳北" class="text" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}" name="keyword">
+          <input type="submit" value="" class="subt">
+          </form>
+      </div>
+  </div>-->
+  <script type="text/javascript">
+    jQuery(".prod").slide({titCell:".hd li",mainCell:".bd",delayTime:0});
+    jQuery(".qmtMedia").slide({mainCell:".bd ul",autoPlay:false,effect:"leftLoop",vis:4,interTime:4000});
+    jQuery(".qmtNews").slide({titCell:".hd li",mainCell:".bd",delayTime:0});
+  </script>
 </block>

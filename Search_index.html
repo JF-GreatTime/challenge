@@ -1,4 +1,4 @@
-﻿<extend name="Public:common"/>
+<extend name="Public:common"/>
 
 <block name="main">
 <script type="text/javascript">
@@ -12,13 +12,13 @@
         <div class="mainBj" style="margin-bottom:0">
             <include file="Public:search"/>
             <div class="qmtInfo">
-                <img src="__IMG__/dt.jpg"/>
-                <p>全媒通是一家具有战略前瞻思想和深厚内涵的文化传媒企业。凭借创新的商业模式、强大的执行力和高效的产业链，迅速成为传媒行业全媒体运营的佼佼者。她致力于媒体大数据的研发，广告投放精准系统的构建，以人为本的精细服务，长期为广告主提供全面、精准、卓越的广告发布解决方案。<br/>
+                <img alt="北京地铁媒体促销" width="1110px" src="http://www.qmtmedia.com/Uploads/201705/591e8c0144c50.jpg"/>
+                <!--<p>全媒通是一家具有战略前瞻思想和深厚内涵的文化传媒企业。凭借创新的商业模式、强大的执行力和高效的产业链，迅速成为传媒行业全媒体运营的佼佼者。她致力于媒体大数据的研发，广告投放精准系统的构建，以人为本的精细服务，长期为广告主提供全面、精准、卓越的广告发布解决方案。<br/>
                  国内唯一媒体广告资源平台交互式运作模式<br/>
                  海量媒体产品实现用户需求与广告精准匹配<br/>
                  为客户提供个性化精准投放方案<br/>
                  全媒体广告投放解决方案提供商
-                </p>
+                </p>-->
             </div>
         </div>
         <div class="mainBj mt20">
@@ -26,7 +26,7 @@
                 {if $list}
                 <ul>
                     <volist name="list" id="r">
-                    <li><a title="{$r.title}" href="{$r.url}"><img width="258" height="209" src="{$r.thumb}" alt="{$r.title}">
+                    <li><a class="Jpic" title="{$r.title}" href="{$r.url}"><p id="Jpicpsearch">{$r.title}</p><img width="258" height="209" src="{$r.thumb}" alt="{$r.title}">
                         <span class="spanBox">{$r.title}</span>
                     </a></li>
                     </volist>

@@ -14,6 +14,7 @@
 <title>{$seo_title}-{$site_name}</title>
 </head>
 <body>
+
 <script type="text/javascript">
 function initArray(){
   for(i=0;i<initArray.arguments.length;i++)
@@ -54,7 +55,7 @@ isnDays[today.getDay()] +"</span>");
     <div class="w1150">
         <h1 class="logo fl"><a title="{$site_name}" href="/"><img alt="{$site_name}" src="{$site_logo}"></a></h1>
         <ul class="nav fr">
-            <li><a {if $current=='/'}{elsse}class="active"{/if} href="/">网站首页</a></li>
+            <li><a {if $current=='/'}class="active"{/if} href="/">网站首页</a></li>
             <Gr:subcat catid="0" id="r">
             <li><a href="{$r.url}" {if $max_parent_catid==$r['id']}class="active"{/if}>{$r.catname}</a></li>
             </Gr:subcat>
@@ -121,7 +122,7 @@ isnDays[today.getDay()] +"</span>");
             <p><a href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
         </div>
-        <div class="sll fr"><img src="{$site_400pic}"></div>
+        <div class="sll fr"><img alt="客服热线" src="{$site_400pic}"></div>
         <div class="clearfix"></div>
         {if $Js}
         <div class="links">
@@ -132,9 +133,9 @@ isnDays[today.getDay()] +"</span>");
         </div>
         {/if}
         <div class="bottom">
-            <div class="logo fl"><a href="/"><img src="__IMG__/dblogo.png"></a></div>
+            <div class="logo fl"><a href="/"><img alt="全媒通LOGO" src="__IMG__/dblogo.png"></a></div>
             <div class="code fr">
-                <img src="{$site_wxqrcode}">
+                <img alt="广告内幕二维码" src="{$site_wxqrcode}">
             </div>
         </div>
 <script>
@@ -146,7 +147,7 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256829311'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1256829311%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+<script> (function () {var _53code=document.createElement("script");_53code.src = '//tb.53kf.com/code/code/10156767/1'; var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(_53code, s);})(); </script>
 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256829311'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1256829311%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
    深圳全媒通文化传播有限公司   版权所有 <a href="http://www.miibeian.gov.cn" style="color:#FFF;">粤ICP备13051758号-1</a>
     <div class="gsbz">
@@ -156,7 +157,7 @@ type="text/javascript" charset="utf-8"></script>
     </div>
     </div>
 </div>
-<!--{:W('Kefu')}-->
+
 <script src="__PUBLIC__/js/yzh.js"></script>
 <script type="text/javascript">
 window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":
@@ -176,10 +177,84 @@ mvl.src = ('https:' == document.location.protocol ? 'https://static-ssl.mediav.c
 var s = document.getElementsByTagName('script')[0];
 s.parentNode.insertBefore(mvl, s);
 })();
-</script>            
+</script>   
+<!--Jremake 20170612-->        
+<!--<a id="top_btn" href="javascript:goTop();"></a>-->
+
+<div style="z-index:99;">
 <a id="top_btn" href="javascript:goTop();"></a>
+        <a id="qq_btn" href="tencent://message/?uin=3528542998&Site=在线咨询&Menu=yes" class="im-qq qq-a" title="客服小珍">
+        <a id="code_btn" href="javascript:;">
+            <div class="weixing-show">
+                <img src="http://www.qmtmedia.com/Uploads/qmtguangg/erweima.jpg" alt="广告内幕二维码"/>
+                <p>微信扫一扫</p>
+            </div>
+        </a></div>
+ <script>
+/*Jremake*/
+    $(function(){
+      $("#code_btn").bind('mouseenter',function(){
+                $('.weixing-show').show();
+            });
+            $("#code_btn").bind('mouseleave',function(){
+                $('.weixing-show').hide();
+            });
+        if($(document).scrollTop()>=36){
+           $(".qmtNav").addClass('Jnav');
+            $(".qmtNav .logo").addClass("Jlogo");
+            $(".qmtNav .nav").addClass("Jnav0");
+            $(".qmtTop").css("margin-bottom","85px");
+        }else{
+            $('.qmtNav').removeClass('Jnav');
+            $(".qmtNav .logo").removeClass("Jlogo");
+            $(".qmtNav .nav").removeClass("Jnav0");
+            $(".qmtTop").css("margin-bottom","");
+        };
+    });
+    $(document).scroll(function(e){
+        if($(document).scrollTop()>=36){
+           $(".qmtNav").addClass('Jnav');
+            $(".qmtNav .logo").addClass("Jlogo");
+            $(".qmtNav .nav").addClass("Jnav0");
+            $(".qmtTop").css("margin-bottom","85px");
+        }else{
+            $('.qmtNav').removeClass('Jnav');
+            $(".qmtNav .logo").removeClass("Jlogo");
+            $(".qmtNav .nav").removeClass("Jnav0");
+            $(".qmtTop").css("margin-bottom","");
+        };
+    });
+  </script>
+
+
 <script type="text/javascript">
 function goTop(){
     $('html,body').animate({'scrollTop':0},600); //滚回顶部的时间，越小滚的速度越快~
 }
+</script>
+<script type="text/javascript">
+/*20170531*/
+    function browserRedirect() {
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+//            document.writeln("phone");
+            $("body").css("width","1920px");
+$(document).scrollLeft(290);
+$("#Jvideo").html("")
+.html('<a href="http://www.qmtmedia.com/qitaguanggao/51-221.html" style="display: block;width: 555px;height: 380px"></a>')
+.css("background","url('/Themes/Home/Default/Public/images/index100.jpg')")
+        } else {
+//            document.writeln("pc");
+        }
+    }
+
+    browserRedirect();
 </script>
