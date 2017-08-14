@@ -68,6 +68,12 @@
 <block name="main"></block>
 <div class="qmtFooter" style="background:url(__IMG__/1mtdbt.jpg) no-repeat center top;">
     <div class="w1150">
+        <!--<div class="menu fl">
+            <h2>形象展示</h2>
+            <Gr:subcat catid="9" id="r">
+            <p><a href="{$r.url}">{$r.catname}</a></p>
+            </Gr:subcat>
+        </div>-->
         <div class="menu fl">
             <h2>交通媒体</h2>
             <Gr:subcat catid="1" id="r">
@@ -151,7 +157,6 @@
         </div>
     </div>
 </div>
-
 <script src="__PUBLIC__/js/yzh.js"></script>
 <script type="text/javascript">
     window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":
@@ -172,6 +177,8 @@
         s.parentNode.insertBefore(mvl, s);
     })();
 </script>
+<!--Jremake 20170612-->
+<!--<a id="top_btn" href="javascript:goTop();"></a>-->
 
 <div style="z-index:99;">
     <a id="top_btn" href="javascript:goTop();"></a>
@@ -223,30 +230,4 @@
     function goTop(){
         $('html,body').animate({'scrollTop':0},600); //滚回顶部的时间，越小滚的速度越快~
     }
-</script>
-<script type="text/javascript">
-    /*20170531*/
-    function browserRedirect() {
-        var sUserAgent = navigator.userAgent.toLowerCase();
-        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-        var bIsAndroid = sUserAgent.match(/android/i) == "android";
-        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-//            document.writeln("phone");
-            $("body").css("width","1920px");
-            $(document).scrollLeft(290);
-            $("#Jvideo").html("")
-                .html('<a href="http://www.qmtmedia.com/qitaguanggao/51-221.html" style="display: block;width: 555px;height: 380px"></a>')
-                .css("background","url('/Themes/Home/Default/Public/images/index100.jpg')")
-        } else {
-//            document.writeln("pc");
-        }
-    }
-
-    browserRedirect();
 </script>
