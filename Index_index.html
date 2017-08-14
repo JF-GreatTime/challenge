@@ -2,7 +2,7 @@
 
 <block name="main">
   <div class="qmtHot">
-    <h2></h2><!--換成背景圖-->
+    <h2></h2>
     <div class="search">
       <form action="/?m=search" method="post">
         <input name="module" value="picture" type="hidden">
@@ -18,7 +18,7 @@
     </div>
   </div>
   <div class="qmtProd" style="background-color:#f5f5f5;">
-    <div class="w1150">
+    <div id="jp" class="w1150">
       <div class="prod">
         <div class="hd hda">
           <h2 class="jIcon">交通媒体</h2>
@@ -31,18 +31,18 @@
         </div>
         <div class="bd bda">
           <ul>
-            <Gr:list catid="56" field="title,url,thumb,species" limit="3" id="r" posid="1">
+            <Gr:list catid="13" field="title,url,thumb,species" limit="3" id="r" posid="1">
               <li>
-                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <a target="_blank" title="{$r.title}" href="{$r.url}" class="Jpic"><p class="JpicIndex">{$r.title}</p><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
                 <p><b>媒体：</b>{$r.title}</p>
                 <p><b>发布周期：</b>{$r.species}</p>
               </li>
             </Gr:list>
           </ul>
           <ul>
-            <Gr:list catid="13" field="title,url,thumb,species" limit="3" id="r" posid="1">
+            <Gr:list catid="56" field="title,url,thumb,species" limit="3" id="r" posid="1">
               <li>
-                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <a target="_blank" title="{$r.title}" href="{$r.url}" class="Jpic"><p class="JpicIndex">{$r.title}</p><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
                 <p><b>媒体：</b>{$r.title}</p>
                 <p><b>发布周期：</b>{$r.species}</p>
               </li>
@@ -51,7 +51,7 @@
           <ul>
             <Gr:list catid="10" field="title,url,thumb,species" limit="3" id="r" posid="1">
               <li>
-                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <a target="_blank" title="{$r.title}" href="{$r.url}" class="Jpic"><p class="JpicIndex">{$r.title}</p><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
                 <p><b>媒体：</b>{$r.title}</p>
                 <p><b>发布周期：</b>{$r.species}</p>
               </li>
@@ -60,7 +60,7 @@
           <ul>
             <Gr:list catid="44" field="title,url,thumb,species" limit="3" id="r" posid="1">
               <li>
-                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <a target="_blank" title="{$r.title}" href="{$r.url}" class="Jpic"><p class="JpicIndex">{$r.title}</p><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
                 <p><b>媒体：</b>{$r.title}</p>
                 <p><b>发布周期：</b>{$r.species}</p>
               </li>
@@ -69,7 +69,7 @@
           <ul>
             <Gr:list catid="12" field="title,url,thumb,species" limit="3" id="r" posid="1">
               <li>
-                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <a target="_blank" title="{$r.title}" href="{$r.url}" class="Jpic"><p class="JpicIndex">{$r.title}</p><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
                 <p><b>媒体：</b>{$r.title}</p>
                 <p><b>发布周期：</b>{$r.species}</p>
               </li>
@@ -78,7 +78,7 @@
           <ul>
             <Gr:list catid="43" field="title,url,thumb,species" limit="3" id="r" posid="1">
               <li>
-                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <a target="_blank" title="{$r.title}" href="{$r.url}" class="Jpic"><p class="JpicIndex">{$r.title}</p><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
                 <p><b>媒体：</b>{$r.title}</p>
                 <p><b>发布周期：</b>{$r.species}</p>
               </li>
@@ -87,7 +87,7 @@
           <ul>
             <Gr:list catid="14" field="title,url,thumb,species" limit="3" id="r" posid="1">
               <li>
-                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <a target="_blank" title="{$r.title}" href="{$r.url}" class="Jpic"><p class="JpicIndex">{$r.title}</p><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
                 <p><b>媒体：</b>{$r.title}</p>
                 <p><b>发布周期：</b>{$r.species}</p>
               </li>
@@ -96,7 +96,7 @@
           <ul>
             <Gr:list catid="49" field="title,url,thumb,species" limit="3" id="r" posid="1">
               <li>
-                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <a target="_blank" title="{$r.title}" href="{$r.url}" class="Jpic"><p class="JpicIndex">{$r.title}</p><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
                 <p><b>媒体：</b>{$r.title}</p>
                 <p><b>发布周期：</b>{$r.species}</p>
               </li>
@@ -118,7 +118,7 @@
           <ul>
             <Gr:list catid="21" field="title,url,thumb,species" limit="3" id="r" posid="1">
               <li>
-                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <a target="_blank" title="{$r.title}" href="{$r.url}" class="Jpic"><p class="JpicIndex">{$r.title}</p><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
                 <p><b>地点：</b>{$r.title}</p>
                 <p><b>发布周期：</b>{$r.species}</p>
               </li>
@@ -127,7 +127,7 @@
           <ul>
             <Gr:list catid="20" field="title,url,thumb,species" limit="3" id="r" posid="1">
               <li>
-                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <a target="_blank" title="{$r.title}" href="{$r.url}" class="Jpic"><p class="JpicIndex">{$r.title}</p><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
                 <p><b>地点：</b>{$r.title}</p>
                 <p><b>发布周期：</b>{$r.species}</p>
               </li>
@@ -136,7 +136,7 @@
           <ul>
             <Gr:list catid="19" field="title,url,thumb,species" limit="3" id="r" posid="1">
               <li>
-                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <a target="_blank" title="{$r.title}" href="{$r.url}" class="Jpic"><p class="JpicIndex">{$r.title}</p><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
                 <p><b>地点：</b>{$r.title}</p>
                 <p><b>发布周期：</b>{$r.species}</p>
               </li>
@@ -145,7 +145,7 @@
           <ul>
             <Gr:list catid="50" field="title,url,thumb,species" limit="3" id="r" posid="1">
               <li>
-                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <a target="_blank" title="{$r.title}" href="{$r.url}" class="Jpic"><p class="JpicIndex">{$r.title}</p><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
                 <p><b>地点：</b>{$r.title}</p>
                 <p><b>发布周期：</b>{$r.species}</p>
               </li>
@@ -154,7 +154,7 @@
           <ul>
             <Gr:list catid="47" field="title,url,thumb,species" limit="3" id="r" posid="1">
               <li>
-                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <a target="_blank" title="{$r.title}" href="{$r.url}" class="Jpic"><p class="JpicIndex">{$r.title}</p><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
                 <p><b>地点：</b>{$r.title}</p>
                 <p><b>发布周期：</b>{$r.species}</p>
               </li>
@@ -163,7 +163,7 @@
           <ul>
             <Gr:list catid="51" field="title,url,thumb,species" limit="3" id="r" posid="1">
               <li>
-                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <a target="_blank" title="{$r.title}" href="{$r.url}" class="Jpic"><p class="JpicIndex">{$r.title}</p><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
                 <p><b>地点：</b>{$r.title}</p>
                 <p><b>发布周期：</b>{$r.species}</p>
               </li>
@@ -172,7 +172,7 @@
           <ul>
             <Gr:list catid="46" field="title,url,thumb,species" limit="3" id="r" posid="1">
               <li>
-                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <a target="_blank" title="{$r.title}" href="{$r.url}" class="Jpic"><p class="JpicIndex">{$r.title}</p><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
                 <p><b>地点：</b>{$r.title}</p>
                 <p><b>发布周期：</b>{$r.species}</p>
               </li>
@@ -181,7 +181,7 @@
           <ul>
             <Gr:list catid="22" field="title,url,thumb,species" limit="3" id="r" posid="1">
               <li>
-                <a target="_blank" title="{$r.title}" href="{$r.url}"><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
+                <a target="_blank" title="{$r.title}" href="{$r.url}" class="Jpic"><p class="JpicIndex">{$r.title}</p><img alt="{$r.title}" width="265" height="220" src="{$r.thumb|thumb=###,265,220,1}"></a>
                 <p><b>地点：</b>{$r.title}</p>
                 <p><b>发布周期：</b>{$r.species}</p>
               </li>
@@ -261,7 +261,7 @@
   <div class="qmtCase">
     <div class="w1150">
       <h2><img src="__IMG__/ggbt.png" alt="广告案例"></h2>
-      <div id="Jvideo" class="video fl"><Gr:block pos="video"/></div>
+      <div class="video fl"><Gr:block pos="video"/></div>
       <div class="case">
         <ul>
           <Gr:list catid="5" field="title,url,thumb" limit="4" id="r" posid="1">
