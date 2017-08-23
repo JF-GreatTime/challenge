@@ -1,50 +1,7 @@
 <extend name="Public:common"/>
 
 <block name="main">
-	<script type="text/javascript">
-		//导航跟随置顶
-		$(function(){
-			var top=$('.mediaL').position().top;
-			/*$(document).scroll(function(e){
-			 if($(document).scrollTop()>=top){
-			 $('.mediaL').css({position:'fixed',top:0})
-			 }else{
-			 $('.mediaL').css({position:'static'});
 
-			 };
-			 });*/
-			/*20170605*/
-			var sUserAgent = navigator.userAgent.toLowerCase();
-			var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-			var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-			var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-			var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-			var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-			var bIsAndroid = sUserAgent.match(/android/i) == "android";
-			var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-			var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-
-/*                       var sn=$('.qmtFooter').offset().top-40;
-                       var oHeight=$(".mediaShow").height();*/
-			$(document).scroll(function(e){
-				if($(document).scrollTop()>=top){
-                                        var oheight=$(document).scrollTop();
-					if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-					}else{
-						$('.mediaL').css({position:'fixed',top:'60px'})
-                     /*if(sn-oheight<oHeight){
-                        $('.mediaL').css({position:'absolute',bottom:0,top:""});
-                    }else{
-                        $('.mediaL').css({position:'fixed',top:"60px",bottom:0});
-                    }*/
-					}
-				}else{
-					$('.mediaL').css({position:'static'});
-                
-				};
-			});
-		});
-	</script>
 	<div class="qmtMain">
 		<div class="w1150">
 			<include file="Public:title"/>
@@ -81,68 +38,67 @@
 				<div class="clearfix"></div>
 				<div class="mediaShow">
 					<div class="mediaL fl">
-						<h3><a href="#mA" name="B" class="mediaLA">全部展开</a></h3>
-						{if !empty($title1)}<h3><a href="#mA" name="A" >{$title1}</a></h3>{/if}
-						{if !empty($title2)}<h3><a href="#mB">{$title2}</a></h3>{/if}
-						{if !empty($title3)}<h3><a href="#mC">{$title3}</a></h3>{/if}
-						{if !empty($title4)}<h3><a href="#mD">{$title4}</a></h3>{/if}
-						{if !empty($title5)}<h3><a href="#mE">{$title5}</a></h3>{/if}
-						{if !empty($title6)}<h3><a href="#mF">{$title6}</a></h3>{/if}
-						{if !empty($title7)}<h3><a href="#mG">{$title7}</a></h3>{/if}
-						{if !empty($title8)}<h3><a href="#mH">{$title8}</a></h3>{/if}
-						{if !empty($title9)}<h3><a href="#mI">{$title9}</a></h3>{/if}
-						{if !empty($title10)}<h3><a href="#mJ">{$title10}</a></h3>{/if}
-						{if !empty($title11)}<h3><a href="#mK">{$title11}</a></h3>{/if}
-						{if !empty($title12)}<h3><a href="#mL">{$title12}</a></h3>{/if}
+						{if !empty($title1)}<h3><a href="javascript:void (0);" name="A" class="mediaLA">{$title1}</a></h3>{/if}
+						{if !empty($title2)}<h3><a href="javascript:void (0);">{$title2}</a></h3>{/if}
+						{if !empty($title3)}<h3><a href="javascript:void (0);">{$title3}</a></h3>{/if}
+						{if !empty($title4)}<h3><a href="javascript:void (0);">{$title4}</a></h3>{/if}
+						{if !empty($title5)}<h3><a href="javascript:void (0);">{$title5}</a></h3>{/if}
+						{if !empty($title6)}<h3><a href="javascript:void (0);">{$title6}</a></h3>{/if}
+						{if !empty($title7)}<h3><a href="javascript:void (0);">{$title7}</a></h3>{/if}
+						{if !empty($title8)}<h3><a href="javascript:void (0);">{$title8}</a></h3>{/if}
+						{if !empty($title9)}<h3><a href="javascript:void (0);">{$title9}</a></h3>{/if}
+						{if !empty($title10)}<h3><a href="javascript:void (0);">{$title10}</a></h3>{/if}
+						{if !empty($title11)}<h3><a href="javascript:void (0);">{$title11}</a></h3>{/if}
+						{if !empty($title12)}<h3><a href="javascript:void (0);">{$title12}</a></h3>{/if}
 
 					</div>
 					<!--reJ-->
 					<div class="mediaR fr">
-						{if !empty($title1)}<div class="meA reJ meAblock">
+						{if !empty($title1)}<div class="meA">
 						<div id="mA" class="title"><span>{$title1}</span></div>
 						<div class="box">{$content1}</div>
 					</div>{/if}
-						{if !empty($title2)}<div class="meA reJ meAblock">
+						{if !empty($title2)}<div class="meA">
 						<div id="mB" class="title"><span>{$title2}</span></div>
 						<div class="box">{$content2}</div>
 					</div>{/if}
-						{if !empty($title3)}<div class="meA reJ meAblock">
+						{if !empty($title3)}<div class="meA">
 						<div id="mC" class="title"><span>{$title3}</span></div>
 						<div class="box">{$content3}</div>
 					</div>{/if}
-						{if !empty($title4)}<div class="meA reJ meAblock">
+						{if !empty($title4)}<div class="meA">
 						<div id="mD" class="title"><span>{$title4}</span></div>
 						<div class="box">{$content4}</div>
 					</div>{/if}
-						{if !empty($title5)}<div class="meA reJ meAblock">
+						{if !empty($title5)}<div class="meA">
 						<div id="mE" class="title"><span>{$title5}</span></div>
 						<div class="box">{$content5}</div>
 					</div>{/if}
-						{if !empty($title6)}<div class="meA reJ meAblock">
+						{if !empty($title6)}<div class="meA">
 						<div id="mF" class="title"><span>{$title6}</span></div>
 						<div class="box">{$content6}</div>
 					</div>{/if}
-						{if !empty($title7)}<div class="meA reJ meAblock">
+						{if !empty($title7)}<div class="meA">
 						<div id="mG" class="title"><span>{$title7}</span></div>
 						<div class="box">{$content7}</div>
 					</div>{/if}
-						{if !empty($title8)}<div class="meA reJ meAblock">
+						{if !empty($title8)}<div class="meA">
 						<div id="mH" class="title"><span>{$title8}</span></div>
 						<div class="box">{$content8}</div>
 					</div>{/if}
-						{if !empty($title9)}<div class="meA reJ meAblock">
+						{if !empty($title9)}<div class="meA">
 						<div id="mI" class="title"><span>{$title9}</span></div>
 						<div class="box">{$content9}</div>
 					</div>{/if}
-						{if !empty($title10)}<div class="meA reJ meAblock">
+						{if !empty($title10)}<div class="meA">
 						<div id="mJ" class="title"><span>{$title10}</span></div>
 						<div class="box">{$content10}</div>
 					</div>{/if}
-						{if !empty($title11)}<div class="meA reJ meAblock">
+						{if !empty($title11)}<div class="meA">
 						<div id="mK" class="title"><span>{$title11}</span></div>
 						<div class="box">{$content11}</div>
 					</div>{/if}
-						{if !empty($title12)}<div class="meA reJ meAblock">
+						{if !empty($title12)}<div class="meA">
 						<div id="mL" class="title"><span>{$title12}</span></div>
 						<div class="box">{$content12}</div>
 					</div>{/if}
@@ -152,44 +108,331 @@
 		</div>
 	</div>
 	<script type="text/javascript">
-		jQuery(".mediaSlide").slide({mainCell:".bd ul",effect:"leftLoop",autoPlay:true,interTime:4000});
+        jQuery(".mediaSlide").slide({mainCell:".bd ul",effect:"leftLoop",autoPlay:true,interTime:4000});
 	</script>
-	<!--reJ20170531-->
+
 	<script type="text/javascript">
-		$('.mediaL a').click(function(){
-			$(".meA").removeClass("meAblock");
-			$('.mediaL a').removeClass("mediaLA");
-			$(this).addClass("mediaLA");
-			var otitle=$(this).attr("href");
-			if(otitle=="#mA"){
-				if($(this).attr("name")=="A"){
-					$(".meA").eq(0).addClass("meAblock");
-				}else{
-					$(".meA").addClass("meAblock");
-				}
-			}else if(otitle=="#mB"){
-				$(".meA").eq(1).addClass("meAblock");
-			}else if(otitle=="#mC"){
-				$(".meA").eq(2).addClass("meAblock");
-			}else if(otitle=="#mD"){
-				$(".meA").eq(3).addClass("meAblock");
-			}else if(otitle=="#mE"){
-				$(".meA").eq(4).addClass("meAblock");
-			}else if(otitle=="#mF"){
-				$(".meA").eq(5).addClass("meAblock");
-			}else if(otitle=="#mG"){
-				$(".meA").eq(6).addClass("meAblock");
-			}else if(otitle=="#mH"){
-				$(".meA").eq(7).addClass("meAblock");
-			}else if(otitle=="#mI"){
-				$(".meA").eq(8).addClass("meAblock");
-			}else if(otitle=="#mJ"){
-				$(".meA").eq(9).addClass("meAblock");
-			}else if(otitle=="#mK"){
-				$(".meA").eq(10).addClass("meAblock");
-			}else if(otitle=="#mL"){
-				$(".meA").eq(11).addClass("meAblock");
-			}
-		});
+        function follow(num,obj) {
+            var omediaL=$('.mediaL a');
+
+			/*1个栏目*/
+            switch (num) {
+                case 1:omediaL.removeClass("mediaLA");
+                    omediaL.eq(0).addClass("mediaLA");
+                    break;
+                case 2: if($(document).scrollTop()>=obj.eq(0).offset().top&&($(document).scrollTop()<obj.eq(1).offset().top-160)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(0).addClass("mediaLA");
+                }else if($(document).scrollTop()>=obj.eq(1).offset().top-160){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(1).addClass("mediaLA");
+                }
+                    break;
+                case 3: if($(document).scrollTop()>=obj.eq(0).offset().top&&($(document).scrollTop()<obj.eq(1).offset().top-160)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(0).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(1).offset().top-160)&&($(document).scrollTop()<obj.eq(2).offset().top-210)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(1).addClass("mediaLA");
+                }else if($(document).scrollTop()>=obj.eq(2).offset().top-210){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(2).addClass("mediaLA");
+                }
+                    break;
+                case 4:if($(document).scrollTop()>=obj.eq(0).offset().top&&($(document).scrollTop()<obj.eq(1).offset().top-160)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(0).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(1).offset().top-160)&&($(document).scrollTop()<obj.eq(2).offset().top-210)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(1).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(2).offset().top-210)&&($(document).scrollTop()<obj.eq(3).offset().top-260)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(2).addClass("mediaLA");
+                }else if($(document).scrollTop()>=obj.eq(3).offset().top-260){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(3).addClass("mediaLA");
+                }
+                    break;
+                case 5:if($(document).scrollTop()>=obj.eq(0).offset().top&&($(document).scrollTop()<obj.eq(1).offset().top-160)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(0).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(1).offset().top-160)&&($(document).scrollTop()<obj.eq(2).offset().top-210)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(1).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(2).offset().top-210)&&($(document).scrollTop()<obj.eq(3).offset().top-260)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(2).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(3).offset().top-260)&&($(document).scrollTop()<obj.eq(4).offset().top-310)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(3).addClass("mediaLA");
+                }else if($(document).scrollTop()>=obj.eq(4).offset().top-310){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(4).addClass("mediaLA");
+                }
+                    break;
+                case 6:if($(document).scrollTop()>=obj.eq(0).offset().top&&($(document).scrollTop()<obj.eq(1).offset().top-160)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(0).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(1).offset().top-160)&&($(document).scrollTop()<obj.eq(2).offset().top-210)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(1).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(2).offset().top-210)&&($(document).scrollTop()<obj.eq(3).offset().top-260)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(2).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(3).offset().top-260)&&($(document).scrollTop()<obj.eq(4).offset().top-310)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(3).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(4).offset().top-310)&&($(document).scrollTop()<obj.eq(5).offset().top-360)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(4).addClass("mediaLA");
+                }else if($(document).scrollTop()>=obj.eq(5).offset().top-360){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(5).addClass("mediaLA");
+                }
+                    break;
+                case 7:if($(document).scrollTop()>=obj.eq(0).offset().top&&($(document).scrollTop()<obj.eq(1).offset().top-160)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(0).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(1).offset().top-160)&&($(document).scrollTop()<obj.eq(2).offset().top-210)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(1).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(2).offset().top-210)&&($(document).scrollTop()<obj.eq(3).offset().top-260)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(2).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(3).offset().top-260)&&($(document).scrollTop()<obj.eq(4).offset().top-310)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(3).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(4).offset().top-310)&&($(document).scrollTop()<obj.eq(5).offset().top-360)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(4).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(5).offset().top-360)&&($(document).scrollTop()<obj.eq(6).offset().top-410)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(5).addClass("mediaLA");
+                }else if($(document).scrollTop()>=obj.eq(6).offset().top-410){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(6).addClass("mediaLA");
+                }
+                    break;
+                case 8:if($(document).scrollTop()>=obj.eq(0).offset().top&&($(document).scrollTop()<obj.eq(1).offset().top-160)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(0).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(1).offset().top-160)&&($(document).scrollTop()<obj.eq(2).offset().top-210)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(1).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(2).offset().top-210)&&($(document).scrollTop()<obj.eq(3).offset().top-260)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(2).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(3).offset().top-260)&&($(document).scrollTop()<obj.eq(4).offset().top-310)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(3).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(4).offset().top-310)&&($(document).scrollTop()<obj.eq(5).offset().top-360)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(4).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(5).offset().top-360)&&($(document).scrollTop()<obj.eq(6).offset().top-410)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(5).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(6).offset().top-410)&&($(document).scrollTop()<obj.eq(7).offset().top-460)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(6).addClass("mediaLA");
+                }else if($(document).scrollTop()>=obj.eq(7).offset().top-460){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(7).addClass("mediaLA");
+                }
+                    break;
+                case 9:if($(document).scrollTop()>=obj.eq(0).offset().top&&($(document).scrollTop()<obj.eq(1).offset().top-160)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(0).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(1).offset().top-160)&&($(document).scrollTop()<obj.eq(2).offset().top-210)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(1).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(2).offset().top-210)&&($(document).scrollTop()<obj.eq(3).offset().top-260)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(2).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(3).offset().top-260)&&($(document).scrollTop()<obj.eq(4).offset().top-310)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(3).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(4).offset().top-310)&&($(document).scrollTop()<obj.eq(5).offset().top-360)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(4).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(5).offset().top-360)&&($(document).scrollTop()<obj.eq(6).offset().top-410)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(5).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(6).offset().top-410)&&($(document).scrollTop()<obj.eq(7).offset().top-460)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(6).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(7).offset().top-460)&&($(document).scrollTop()<obj.eq(8).offset().top-510)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(7).addClass("mediaLA");
+                }else if($(document).scrollTop()>=obj.eq(8).offset().top-510){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(8).addClass("mediaLA");
+                }
+                    break;
+                case 10:if($(document).scrollTop()>=obj.eq(0).offset().top&&($(document).scrollTop()<obj.eq(1).offset().top-160)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(0).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(1).offset().top-160)&&($(document).scrollTop()<obj.eq(2).offset().top-210)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(1).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(2).offset().top-210)&&($(document).scrollTop()<obj.eq(3).offset().top-260)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(2).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(3).offset().top-260)&&($(document).scrollTop()<obj.eq(4).offset().top-310)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(3).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(4).offset().top-310)&&($(document).scrollTop()<obj.eq(5).offset().top-360)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(4).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(5).offset().top-360)&&($(document).scrollTop()<obj.eq(6).offset().top-410)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(5).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(6).offset().top-410)&&($(document).scrollTop()<obj.eq(7).offset().top-460)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(6).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(7).offset().top-460)&&($(document).scrollTop()<obj.eq(8).offset().top-510)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(7).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(8).offset().top-560)&&($(document).scrollTop()<obj.eq(9).offset().top-610)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(8).addClass("mediaLA");
+                }else if($(document).scrollTop()>=obj.eq(9).offset().top-610){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(9).addClass("mediaLA");
+                }
+                    break;
+                case 11:if($(document).scrollTop()>=obj.eq(0).offset().top&&($(document).scrollTop()<obj.eq(1).offset().top-160)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(0).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(1).offset().top-160)&&($(document).scrollTop()<obj.eq(2).offset().top-210)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(1).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(2).offset().top-210)&&($(document).scrollTop()<obj.eq(3).offset().top-260)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(2).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(3).offset().top-260)&&($(document).scrollTop()<obj.eq(4).offset().top-310)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(3).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(4).offset().top-310)&&($(document).scrollTop()<obj.eq(5).offset().top-360)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(4).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(5).offset().top-360)&&($(document).scrollTop()<obj.eq(6).offset().top-410)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(5).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(6).offset().top-410)&&($(document).scrollTop()<obj.eq(7).offset().top-460)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(6).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(7).offset().top-460)&&($(document).scrollTop()<obj.eq(8).offset().top-510)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(7).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(8).offset().top-560)&&($(document).scrollTop()<obj.eq(9).offset().top-610)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(8).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(9).offset().top-610)&&($(document).scrollTop()<obj.eq(10).offset().top-660)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(9).addClass("mediaLA");
+                }else if($(document).scrollTop()>=obj.eq(10).offset().top-660){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(10).addClass("mediaLA");
+                }
+                    break;
+                case 12:if($(document).scrollTop()>=obj.eq(0).offset().top&&($(document).scrollTop()<obj.eq(1).offset().top-160)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(0).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(1).offset().top-160)&&($(document).scrollTop()<obj.eq(2).offset().top-210)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(1).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(2).offset().top-210)&&($(document).scrollTop()<obj.eq(3).offset().top-260)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(2).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(3).offset().top-260)&&($(document).scrollTop()<obj.eq(4).offset().top-310)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(3).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(4).offset().top-310)&&($(document).scrollTop()<obj.eq(5).offset().top-360)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(4).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(5).offset().top-360)&&($(document).scrollTop()<obj.eq(6).offset().top-410)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(5).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(6).offset().top-410)&&($(document).scrollTop()<obj.eq(7).offset().top-460)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(6).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(7).offset().top-460)&&($(document).scrollTop()<obj.eq(8).offset().top-510)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(7).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(8).offset().top-560)&&($(document).scrollTop()<obj.eq(9).offset().top-610)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(8).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(9).offset().top-610)&&($(document).scrollTop()<obj.eq(10).offset().top-660)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(9).addClass("mediaLA");
+                }else if(($(document).scrollTop()>=obj.eq(10).offset().top-650)&&($(document).scrollTop()<obj.eq(11).offset().top-710)){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(10).addClass("mediaLA");
+                }else if($(document).scrollTop()>=obj.eq(11).offset().top-710){
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(11).addClass("mediaLA");
+                }
+                default: break;
+            }
+        }
+        //导航跟随置顶
+        $(function(){
+            var obj=$('.meA');
+            var num=obj.length;
+            var top=$('.mediaL').offset().top;
+            $(document).scroll(function(e){
+                if($(document).scrollTop()>=top){
+                    var n=num-1;
+                    var st=obj.eq(n).offset().top-(110+50*n);
+                    console.log($(document).scrollTop()-st);
+                    if($(document).scrollTop()>=st){
+                        var l=60-($(document).scrollTop()-st)+"px";
+                        $('.mediaL').css({position:'fixed',top:l});
+                    }else {
+                        $('.mediaL').css({position:'fixed',top:'60px'});
+                    }
+                    follow(num,obj);
+                }else{
+                    $('.mediaL').css({position:'static'});
+                }
+            });
+        });
+        //点击栏目
+        $('.mediaL h3').click(function(){
+            var obj=$('.meA');
+            var otitle1=$(this).index();
+            var omediaL=$('.mediaL a');
+            function JscrollTop(top) {
+                $('html,body').animate({'scrollTop':top},0);
+            }
+            switch (otitle1){
+                case 0:JscrollTop(obj.eq(0).offset().top-60);
+                    omediaL.removeClass("mediaLA");
+                    omediaL.eq(0).addClass("mediaLA");
+                    break;
+                case 1:JscrollTop(obj.eq(1).offset().top-110);
+                    break;
+                case 2:JscrollTop(obj.eq(2).offset().top-160);
+                    break;
+                case 3:JscrollTop(obj.eq(3).offset().top-210);
+                    break;
+                case 4:JscrollTop(obj.eq(4).offset().top-260);
+                    break;
+                case 5:JscrollTop(obj.eq(5).offset().top-310);
+                    break;
+                case 6:JscrollTop(obj.eq(6).offset().top-360);
+                    break;
+                case 7:JscrollTop(obj.eq(7).offset().top-410);
+                    break;
+                case 8:JscrollTop(obj.eq(8).offset().top-460);
+                    break;
+                case 9:JscrollTop(obj.eq(9).offset().top-510);
+                    break;
+                case 10:JscrollTop(obj.eq(10).offset().top-560);
+                    break;
+                case 11:JscrollTop(obj.eq(11).offset().top-610);
+                    break;
+            }
+        });
 	</script>
 </block>
