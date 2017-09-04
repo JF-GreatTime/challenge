@@ -41,7 +41,8 @@ function getFullYear(d){
 </script>
 <div class="qmtTop">
     <div class="w1150">
-        <div class="fl"><span style="color:#fff;font-weight:bold;">全 媒 体 广 告 专 业 运 营 商 ！</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <div class="fl"><span style="color:#fff;font-weight:normal;font-family:'Adobe 宋体 Std L';">定位投放组合指导单位!&nbsp;&nbsp;&nbsp;定位检测 · 媒介组合 · 渠道甄选 · 效果评估
+ </span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
             <script type="text/javascript">
             document.write("<span class='time'>"+ getFullYear(today)+"年" + ""+ isnMonths[today.getMonth()] +"月"+ today.getDate() +"日&nbsp;&nbsp;"+ 
 
@@ -54,10 +55,10 @@ isnDays[today.getDay()] +"</span>");
 <div class="qmtNav">
     <div class="w1150">
         <h1 class="logo fl"><a title="{$site_name}" href="/"><img alt="{$site_name}" src="{$site_logo}"></a></h1>
-        <ul class="nav fr">
-            <li><a {if $current=='/'}class="active"{/if} href="/">网站首页</a></li>
+        <ul  id="jnavlist" class="nav fr">
+            <li><a {if $current=='/'}class="active"{/if} href="/"><span class="navSpan">网站首页</span></a></li>
             <Gr:subcat catid="0" id="r">
-            <li><a href="{$r.url}" {if $max_parent_catid==$r['id']}class="active"{/if}>{$r.catname}</a></li>
+            <li><a href="{$r.url}" {if $max_parent_catid==$r['id']}class="active"{/if}><span class="navSpan">{$r.catname}</span></a><ul class="navlist"></ul></li>
             </Gr:subcat>
         </ul>
     </div>
@@ -209,6 +210,63 @@ s.parentNode.insertBefore(mvl, s);
             $(".qmtNav .nav").removeClass("Jnav0");
             $(".qmtTop").css("margin-bottom","");
         };
+/*导航栏*/
+        var ullist=new Array();
+        var list0=[
+            {'href':'/hangkongguanggao.html','title':'机场广告'},
+            {'href':'/ditiegg.html','title':'地铁广告'},
+            {'href':'/gaotiegg.html','title':'高铁列车广告'},
+            {'href':'/gaotiezhangg.html','title':'高铁站广告'},
+            {'href':'/gongjiaoguanggao.html','title':'公交车广告'},
+            {'href':'/hangyunguanggao.html','title':'公交站广告'},
+            {'href':'/gaosugg.html','title':'高速大牌广告'},
+            {'href':'/xinxingjiaotong.html','title':'其他交通广告'}
+            ];
+        var list1=[
+            {'href':'/dsppingtai.html','title':'DSP平台'},
+            {'href':'/wangluoshipin.html','title':'网络视频'},
+            {'href':'/menhuwangzhan.html','title':'软文平台'},
+            {'href':'/apppingtai.html','title':'APP平台'}
+        ];
+        var list2=[
+            {'href':'/ledguanggao.html','title':'LED广告'},
+            {'href':'/huwaiguanggao.html','title':'户外大牌'},
+            {'href':'/shequshangquan.html','title':'社区广告'},
+            {'href':'/shangquanguanggao.html','title':'商圈广告'},
+            {'href':'/jingqugg.html','title':'景区广告'},
+            {'href':'/qitaguanggao.html','title':'城市地标'},
+            {'href':'/dianshiguangbo.html','title':'电视广播'},
+            {'href':'/guojimeitgg.html','title':'国际媒体'}
+            ];
+        var list3=[];
+        var list4=[];
+        var list5=[
+            {'href':'/xingyeyusuandingzhi.html','title':'品牌顾问服务'},
+            {'href':'/quyutaocandingzhi.html','title':'广告发布代理'},
+            {'href':'/shijietaocandingzhi.html','title':'优质渠道定制'}
+        ];
+        var list6=[
+            {'href':'/xinwenzixun.html','title':'广告新闻资讯'},
+            {'href':'/guanggaozhishi.html','title':'广告媒体知识'},
+            {'href':'/yejieshuju.html','title':'广告业界数据'}
+        ];
+        var list7=[
+            {'href':'/gongsijianjie.html','title':'公司简介'},
+            {'href':'/qiyewenhua.html','title':'企业文化'},
+            {'href':'/lianxifangshi.html','title':'联系方式'},
+            {'href':'/zaixianliuyan.html','title':'在线留言'},
+            {'href':'/zhaopin.html','title':'人才招聘'}
+        ];
+        ullist.push(list0,list1,list2,list3,list4,list5,list6,list7);
+        var arrNavlist=$(".navlist");
+       for (var i=0;i<arrNavlist.length;i++){
+            if(ullist[i].length==0){
+                continue;
+            }
+            for (var j=0;j<ullist[i].length;j++){
+                arrNavlist[i].innerHTML+='<li><a href="'+ullist[i][j].href+'" title="'+ullist[i][j].title+'">'+ullist[i][j].title+'</a></li>'
+            }
+        }
     });
     $(document).scroll(function(e){
         if($(document).scrollTop()>=36){
