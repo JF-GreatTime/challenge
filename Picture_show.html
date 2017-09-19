@@ -378,7 +378,7 @@
 		//导航跟随置顶
 		$(function(){
 		var obj=$('.meA');
-                var num=obj.length;
+            var num=obj.length;
             var top=$('.mediaL').offset().top;
 			$(document).scroll(function(e){
 				 if($(document).scrollTop()>=top){
@@ -395,9 +395,10 @@ follow(num,obj);
 					 $('.mediaL').css({position:'static'});
 				 }
 			});
+            //面包屑导航
+			$('.Jstate').html(" >&nbsp;{$title}");
 		});
-//点击栏目
-
+		//点击栏目
         $('.mediaL h3').click(function(){
             var obj=$('.meA');
             var otitle1=$(this).index();
@@ -434,6 +435,6 @@ follow(num,obj);
                     break;
             }
         });
-	</script>
 
+	</script>
 </block>
