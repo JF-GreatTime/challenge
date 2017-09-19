@@ -5,7 +5,7 @@
         <input name="m" value="search" type="hidden">
         <input name="a" value="index" type="hidden">
         <input type="text" value="{if $keyword}{$keyword}{else}请输入您要查找的媒体，城市+媒体，如：北京地铁{/if}" class="text" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}" name="keyword">
-        <input type="submit" value="" class="subt">
+        <input type="submit" value="" class="subt" onclick="return dealKeyword(this.form)">
         </form>
     </div>
     <div class="keyword fr">

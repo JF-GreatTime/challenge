@@ -3,12 +3,11 @@
 <block name="main">
   <div class="qmtHot">
     <h2></h2>
-    <p></p>
     <div class="search">
-      <form action="/?m=search" method="post">
+      <form action="/?m=search" method="post" autocomplete="off">
         <input name="module" value="picture" type="hidden">
-        <input type="text" value="请输入您要查找的媒体，城市+媒体，如：北京地铁" class="text" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}" name="keyword">
-        <input type="submit" value="" class="subt">
+        <input type="text" value="{if $keyword}{$keyword}{else}请输入您要查找的媒体，城市+媒体，如：北京地铁{/if}" class="text" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}" name="keyword">
+        <input type="submit" value="" class="subt" onclick="return dealKeyword(this.form)">
       </form>
     </div>
     <div class="keyword">
@@ -243,7 +242,7 @@
     </div>
   </div>
   <div class="qmtMedia w1150">
-    <h2><img src="__IMG__/mtbt.jpg" alt="媒体促销"></h2>
+    <h3><img src="__IMG__/mtbt.jpg" alt="媒体促销"></h3>
     <a class="prev"></a>
     <a class="next"></a>
     <div class="bd">
@@ -261,7 +260,7 @@
   </div>
   <div class="qmtCase">
     <div class="w1150">
-      <h2><img src="__IMG__/ggbt.png" alt="广告案例"></h2>
+      <h3><img src="__IMG__/ggbt.png" alt="广告案例"></h3>
       <div class="video fl"><Gr:block pos="video"/></div>
       <div class="case">
         <ul>
@@ -275,7 +274,7 @@
     </div>
   </div>
   <div class="qmtCustomize w1150">
-    <h2><img alt="企业行销策划" src="__IMG__/dz.jpg"></h2>
+    <h3><img alt="企业行销策划" src="__IMG__/dz.jpg"></h3>
     <a href="{$Cats[24][url]}"><img alt="行业预算定制" src="__IMG__/dz1.jpg"></a>
     <a class="a" href="{$Cats[25][url]}"><img alt="区域套餐定制" src="__IMG__/dz2.jpg"></a>
     <a class="a" href="{$Cats[26][url]}"><img alt="时节套餐定制" src="__IMG__/dz3.jpg"></a>
@@ -326,8 +325,8 @@
     </div>
   </div>
   <script type="text/javascript">
-    jQuery(".prod").slide({titCell:".hd li",mainCell:".bd",delayTime:0});
-    jQuery(".qmtMedia").slide({mainCell:".bd ul",autoPlay:false,effect:"leftLoop",vis:4,interTime:4000});
-    jQuery(".qmtNews").slide({titCell:".hd li",mainCell:".bd",delayTime:0});
+      jQuery(".prod").slide({titCell:".hd li",mainCell:".bd",delayTime:0});
+      jQuery(".qmtMedia").slide({mainCell:".bd ul",autoPlay:false,effect:"leftLoop",vis:4,interTime:4000});
+      jQuery(".qmtNews").slide({titCell:".hd li",mainCell:".bd",delayTime:0});
   </script>
 </block>

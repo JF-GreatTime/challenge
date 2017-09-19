@@ -70,55 +70,55 @@ isnDays[today.getDay()] +"</span>");
 <div class="qmtFooter" style="background:url(__IMG__/1mtdbt.jpg) no-repeat center top;">
     <div class="w1150">
         <!--<div class="menu fl">
-            <h2>形象展示</h2>
+            <h3>形象展示</h2>
             <Gr:subcat catid="9" id="r">
             <p><a href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
         </div>-->
         <div class="menu fl">
-            <h2>交通媒体</h2>
+            <h3>交通媒体</h3>
             <Gr:subcat catid="1" id="r">
             <p><a href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
         </div>
         <div class="menu fl">
-            <h2>新媒体</h2>
+            <h3>新媒体</h3>
             <Gr:subcat catid="2" id="r">
             <p><a href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
         </div>
         <div class="menu fl">
-            <h2>综合媒体</h2>
+            <h3>综合媒体</h3>
             <Gr:subcat catid="3" id="r">
             <p><a href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
         </div>
         <div class="menu fl">
-            <h2>媒体促销</h2>
+            <h3>媒体促销</h3>
             <Gr:subcat catid="4" id="r">
             <p><a href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
         </div>
         <div class="menu fl">
-            <h2>广告案例</h2>
+            <h3>广告案例</h3>
             <Gr:subcat catid="5" id="r">
             <p><a href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
         </div>
         <div class="menu fl">
-            <h2>企业定制</h2>
+            <h3>企业定制</h3>
             <Gr:subcat catid="6" id="r">
             <p><a href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
         </div>
         <div class="menu fl">
-            <h2>媒体资讯</h2>
+            <h3>媒体资讯</h3>
             <Gr:subcat catid="7" id="r">
             <p><a href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
         </div>
         <div class="menu fl">
-            <h2>联系我们</h2>
+            <h3>联系我们</h3>
             <Gr:subcat catid="8" id="r">
             <p><a href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
@@ -177,8 +177,8 @@ mvl.src = ('https:' == document.location.protocol ? 'https://static-ssl.mediav.c
 var s = document.getElementsByTagName('script')[0];
 s.parentNode.insertBefore(mvl, s);
 })();
-</script>   
-<!--Jremake 20170612-->        
+</script>
+<!--Jremake 20170612-->
 <!--<a id="top_btn" href="javascript:goTop();"></a>-->
 <div style="z-index:99;">
 <a id="top_btn" href="javascript:goTop();"></a>
@@ -280,7 +280,32 @@ s.parentNode.insertBefore(mvl, s);
             $(".qmtTop").css("margin-bottom","");
         };
     });
-  </script>
+/*搜索关键词处理0909*/
+function dealKeyword(form) {
+    var strKeyword=form.keyword.value;
+    strKeyword=strKeyword.replace(/\s/g,"");
+    var keywords;
+    var n=0;
+    if(strKeyword.indexOf("哈尔滨")>=0){ n=strKeyword.indexOf("哈尔滨");keywords=cutKeyword(strKeyword,n,3);}
+    else if(strKeyword.indexOf("石家庄")>=0){n=strKeyword.indexOf("石家庄");keywords=cutKeyword(strKeyword,n,3);}
+    else if(strKeyword.indexOf("鄂尔多斯")>=0){n=strKeyword.indexOf("鄂尔多斯");keywords=cutKeyword(strKeyword,n,4);}
+    else if(strKeyword.indexOf("乌鲁木齐")>=0){n=strKeyword.indexOf("乌鲁木齐");keywords=cutKeyword(strKeyword,n,4);}
+    else if(strKeyword.indexOf("呼和浩特")>=0){n=strKeyword.indexOf("呼和浩特");keywords=cutKeyword(strKeyword,n,4);}
+    else if(strKeyword.indexOf("广珠城轨")>=0){n=strKeyword.indexOf("广珠城轨");keywords=cutKeyword(strKeyword,n,4);}
+    else if(strKeyword.indexOf("呼和浩特")>=0){n=strKeyword.indexOf("呼和浩特");keywords=cutKeyword(strKeyword,n,4);}
+    else {n=0;keywords=cutKeyword(strKeyword,n,2);}
+    console.log(keywords);
+    form.keyword.value=keywords;
+    return true;
+}
+function cutKeyword(strKeyword,n,slength) {
+    var strKeyword=strKeyword;
+    var n=n;
+    var slength=slength;
+    strKeyword=strKeyword.substr(n,n+slength)+"%"+strKeyword.substr(n+slength,strKeyword.length);
+    return strKeyword;
+}
+</script>
 <script type="text/javascript">
 function goTop(){
     $('html,body').animate({'scrollTop':0},600); //滚回顶部的时间，越小滚的速度越快~
