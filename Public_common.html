@@ -1,52 +1,50 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="{$seo_keywords}" />
-<meta name="description" content="{$seo_description}" />
-<link type="image/x-icon" href="/favicon.ico" rel="shortcut icon">
-<link rel="stylesheet" type="text/css" href="__CSS__/yzh.css">
-<link rel="stylesheet" type="text/css" href="__CSS__/style.css">
-<script src="__JS__/jquery.min.js"></script>
-<script src="__JS__/superslide.js"></script>
-<block name="style"></block>
-<title>{$seo_title}-{$site_name}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="{$seo_keywords}" />
+    <meta name="description" content="{$seo_description}" />
+    <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="__CSS__/yzh.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/style.css">
+    <script src="__JS__/jquery.min.js"></script>
+    <script src="__JS__/superslide.js"></script>
+    <block name="style"></block>
+    <title>{$seo_title}-{$site_name}</title>
 </head>
 <body>
 
 <script type="text/javascript">
-function initArray(){
-  for(i=0;i<initArray.arguments.length;i++)
-  this[i]=initArray.arguments[i];
-}
-var isnMonths=new initArray("1","2","3","4","5","6","7","8","9","10","11","12");
-var isnDays=new initArray("星期日","星期一","星期二","星期三","星期四","星期五","星期六","星期日");
-today=new Date();
-hrs=today.getHours();
-min=today.getMinutes();
-sec=today.getSeconds();
-clckh=""+((hrs>12)?hrs-12:hrs);
-clckm=((min<10)?"0":"")+min;clcks=((sec<10)?"0":"")+sec;
-clck=(hrs>=12)?"下午":"上午";
-var stnr="";
-var ns="0123456789";
-var a="";
-function getFullYear(d){
-  yr=d.getYear();
-  if(yr<1000)
-  yr+=1900;
-  return yr;
-}
+    function initArray(){
+        for(i=0;i<initArray.arguments.length;i++)
+            this[i]=initArray.arguments[i];
+    }
+    var isnMonths=new initArray("1","2","3","4","5","6","7","8","9","10","11","12");
+    var isnDays=new initArray("星期日","星期一","星期二","星期三","星期四","星期五","星期六","星期日");
+    today=new Date();
+    hrs=today.getHours();
+    min=today.getMinutes();
+    sec=today.getSeconds();
+    clckh=""+((hrs>12)?hrs-12:hrs);
+    clckm=((min<10)?"0":"")+min;clcks=((sec<10)?"0":"")+sec;
+    clck=(hrs>=12)?"下午":"上午";
+    var stnr="";
+    var ns="0123456789";
+    var a="";
+    function getFullYear(d){
+        yr=d.getYear();
+        if(yr<1000)
+            yr+=1900;
+        return yr;
+    }
 </script>
 <div class="qmtTop">
     <div class="w1150">
-        <div class="fl"><span style="color:#fff;font-weight:normal;font-family:'Adobe 宋体 Std L';">定位投放组合指导单位!&nbsp;&nbsp;&nbsp;定位检测 · 媒介组合 · 渠道甄选 · 效果评估
- </span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <div class="fl"><span style="color:#fff;font-weight:normal;font-family:'Adobe 宋体 Std L';line-height:10px;">定位投放组合指导单位!&nbsp;&nbsp;&nbsp;定位检测 · 媒介组合 · 渠道甄选 · 效果评估 </span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
             <script type="text/javascript">
-            document.write("<span class='time'>"+ getFullYear(today)+"年" + ""+ isnMonths[today.getMonth()] +"月"+ today.getDate() +"日&nbsp;&nbsp;"+ 
-
-isnDays[today.getDay()] +"</span>");
+                document.write("<span class='time'>"+ getFullYear(today)+"年" + ""+ isnMonths[today.getMonth()] +"月"+ today.getDate() +"日&nbsp;&nbsp;"+
+                    isnDays[today.getDay()] +"</span>");
             </script>
         </div>
         <div class="fr">全国统一免费服务热线：{$site_tel400}</div>
@@ -54,11 +52,11 @@ isnDays[today.getDay()] +"</span>");
 </div>
 <div class="qmtNav">
     <div class="w1150">
-        <h1 class="logo fl"><a title="{$site_name}" href="/"><img alt="{$site_name}" src="{$site_logo}"></a></h1>
+        <div class="logo fl"><a title="{$site_name}" href="/"><img alt="{$site_name}" src="{$site_logo}"></a></div>
         <ul  id="jnavlist" class="nav fr">
             <li><a {if $current=='/'}class="active"{/if} href="/"><span class="navSpan">网站首页</span></a></li>
             <Gr:subcat catid="0" id="r">
-            <li><a href="{$r.url}" {if $max_parent_catid==$r['id']}class="active"{/if}><span class="navSpan">{$r.catname}</span></a><ul class="navlist"></ul></li>
+                <li><a href="{$r.url}" {if $max_parent_catid==$r['id']}class="active"{/if}><span class="navSpan">{$r.catname}</span></a><ul class="navlist"></ul></li>
             </Gr:subcat>
         </ul>
     </div>
@@ -70,7 +68,7 @@ isnDays[today.getDay()] +"</span>");
 <div class="qmtFooter" style="background:url(__IMG__/1mtdbt.jpg) no-repeat center top;">
     <div class="w1150">
         <!--<div class="menu fl">
-            <h3>形象展示</h2>
+            <h3>形象展示</h3>
             <Gr:subcat catid="9" id="r">
             <p><a href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
@@ -78,49 +76,49 @@ isnDays[today.getDay()] +"</span>");
         <div class="menu fl">
             <h3>交通媒体</h3>
             <Gr:subcat catid="1" id="r">
-            <p><a href="{$r.url}">{$r.catname}</a></p>
+                <p><a href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
         </div>
         <div class="menu fl">
             <h3>新媒体</h3>
             <Gr:subcat catid="2" id="r">
-            <p><a href="{$r.url}">{$r.catname}</a></p>
+                <p><a href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
         </div>
         <div class="menu fl">
             <h3>综合媒体</h3>
             <Gr:subcat catid="3" id="r">
-            <p><a href="{$r.url}">{$r.catname}</a></p>
+                <p><a href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
         </div>
         <div class="menu fl">
             <h3>媒体促销</h3>
             <Gr:subcat catid="4" id="r">
-            <p><a href="{$r.url}">{$r.catname}</a></p>
+                <p><a href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
         </div>
         <div class="menu fl">
             <h3>广告案例</h3>
             <Gr:subcat catid="5" id="r">
-            <p><a href="{$r.url}">{$r.catname}</a></p>
+                <p><a href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
         </div>
         <div class="menu fl">
             <h3>企业定制</h3>
             <Gr:subcat catid="6" id="r">
-            <p><a href="{$r.url}">{$r.catname}</a></p>
+                <p><a href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
         </div>
         <div class="menu fl">
             <h3>媒体资讯</h3>
             <Gr:subcat catid="7" id="r">
-            <p><a href="{$r.url}">{$r.catname}</a></p>
+                <p><a href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
         </div>
         <div class="menu fl">
             <h3>联系我们</h3>
             <Gr:subcat catid="8" id="r">
-            <p><a href="{$r.url}">{$r.catname}</a></p>
+                <p><a rel="nofollow" href="{$r.url}">{$r.catname}</a></p>
             </Gr:subcat>
         </div>
         <div class="sll fr"><img alt="客服热线" src="{$site_400pic}"></div>
@@ -129,7 +127,7 @@ isnDays[today.getDay()] +"</span>");
         <div class="links">
             友情链接：
             <Gr:link typeid="0" linktype="1" key="i" limit="40">
-            <span {if $i==1}style="display:none;"{/if}>|</span><a href="{$r['siteurl']}" target="_blank">{$r['name']}</a>
+                <span {if $i==1}style="display:none;"{/if}>|</span><a href="{$r['siteurl']}" target="_blank">{$r['name']}</a>
             </Gr:link>
         </div>
         {/if}
@@ -139,67 +137,68 @@ isnDays[today.getDay()] +"</span>");
                 <img alt="广告内幕二维码" src="{$site_wxqrcode}">
             </div>
         </div>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?9412489d2fc7932f10967b0b2a54582d";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-<script> (function () {var _53code=document.createElement("script");_53code.src = '//tb.53kf.com/code/code/10156767/1'; var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(_53code, s);})(); </script>
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256829311'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1256829311%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
-   深圳全媒通文化传播有限公司   版权所有 <a href="http://www.miibeian.gov.cn" style="color:#FFF;">粤ICP备13051758号-1</a>
-    <div class="gsbz">
-    <script id="ebsgovicon" src="http://szcert.ebs.org.cn/govicon.js?id=ae442c79-f2c9-410b-a25b-85b4eb4f80b8&width=75&height=105&type=1" 
-
-type="text/javascript" charset="utf-8"></script>
-    </div>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?9412489d2fc7932f10967b0b2a54582d";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+        <script> (function () {var _53code=document.createElement("script");_53code.src = '//tb.53kf.com/code/code/10156767/1'; var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(_53code, s);})(); </script>
+        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256829311'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1256829311%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+        深圳全媒通文化传播有限公司   版权所有 <a rel="nofollow" href="http://www.miibeian.gov.cn" style="color:#FFF;">粤ICP备13051758号-1</a>
+        <div class="gsbz">
+            <!--<script id="ebsgovicon" src="http://szcert.ebs.org.cn/govicon.js?id=ae442c79-f2c9-410b-a25b-85b4eb4f80b8&width=75&height=105&type=1" type="text/javascript" charset="utf-8"></script>-->
+            <a rel="nofollow" href="http://szcert.ebs.org.cn/ae442c79-f2c9-410b-a25b-85b4eb4f80b8" target="_blank"><img src="http://szcert.ebs.org.cn/Images/govIcon.gif" title="深圳市市场监督管理局企业主体身份公示" alt="深圳市市场监督管理局企业主体身份公示" width="75" height="105" border="0" style="border-width:0px;border:hidden; border:none;"></a>
+            <script type="text/javascript" src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+        </div>
     </div>
 </div>
 <script src="__PUBLIC__/js/yzh.js"></script>
 <script type="text/javascript">
-window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":
+    window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":
 
-{"type":"slide","bdImg":"7","bdPos":"left","bdTop":"120"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement
+        {"type":"slide","bdImg":"7","bdPos":"left","bdTop":"120"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement
 
-('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    ('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
 </script>
 <script type="text/javascript">
-var _mvq = _mvq || [];
-_mvq.push(['$setAccount', 'm-222426-0']);
-_mvq.push(['$logConversion']);
-(function() {
-var mvl = document.createElement('script');
-mvl.type = 'text/javascript'; mvl.async = true;
-mvl.src = ('https:' == document.location.protocol ? 'https://static-ssl.mediav.com/mvl.js' : 'http://static.mediav.com/mvl.js');
-var s = document.getElementsByTagName('script')[0];
-s.parentNode.insertBefore(mvl, s);
-})();
+    var _mvq = _mvq || [];
+    _mvq.push(['$setAccount', 'm-222426-0']);
+    _mvq.push(['$logConversion']);
+    (function() {
+        var mvl = document.createElement('script');
+        mvl.type = 'text/javascript'; mvl.async = true;
+        mvl.src = ('https:' == document.location.protocol ? 'https://static-ssl.mediav.com/mvl.js' : 'http://static.mediav.com/mvl.js');
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(mvl, s);
+    })();
 </script>
 <!--Jremake 20170612-->
 <!--<a id="top_btn" href="javascript:goTop();"></a>-->
+
 <div style="z-index:99;">
-<a id="top_btn" href="javascript:goTop();"></a>
-        <a id="qq_btn" href="tencent://message/?uin=3528542998&Site=在线咨询&Menu=yes" class="im-qq qq-a" title="客服小珍">
-        <a id="code_btn" href="javascript:;">
+    <a id="top_btn" rel="nofollow" href="javascript:goTop();"></a>
+    <a id="qq_btn" rel="nofollow" href="tencent://message/?uin=3528542998&Site=在线咨询&Menu=yes" class="im-qq qq-a" title="客服小珍">
+        <a id="code_btn" rel="nofollow" href="/quyutaocandingzhi.html">
             <div class="weixing-show">
                 <img src="http://www.qmtmedia.com/Uploads/qmtguangg/erweima.jpg" alt="广告内幕二维码"/>
                 <p>微信扫一扫</p>
             </div>
         </a></div>
 <script>
-/*Jremake*/
+    /*Jremake*/
     $(function(){
-      $("#code_btn").bind('mouseenter',function(){
-                $('.weixing-show').show();
-            });
-            $("#code_btn").bind('mouseleave',function(){
-                $('.weixing-show').hide();
-            });
+        $("#code_btn").bind('mouseenter',function(){
+            $('.weixing-show').show();
+        });
+        $("#code_btn").bind('mouseleave',function(){
+            $('.weixing-show').hide();
+        });
         if($(document).scrollTop()>=36){
-           $(".qmtNav").addClass('Jnav');
+            $(".qmtNav").addClass('Jnav');
             $(".qmtNav .logo").addClass("Jlogo");
             $(".qmtNav .nav").addClass("Jnav0");
             $(".qmtTop").css("margin-bottom","85px");
@@ -209,7 +208,7 @@ s.parentNode.insertBefore(mvl, s);
             $(".qmtNav .nav").removeClass("Jnav0");
             $(".qmtTop").css("margin-bottom","");
         };
-/*导航栏*/
+        /*导航栏*/
         var ullist=new Array();
         var list0=[
             {'href':'/hangkongguanggao.html','title':'机场广告'},
@@ -220,7 +219,7 @@ s.parentNode.insertBefore(mvl, s);
             {'href':'/hangyunguanggao.html','title':'公交站台'},
             {'href':'/gaosugg.html','title':'高速大牌'},
             {'href':'/xinxingjiaotong.html','title':'其他广告'}
-            ];
+        ];
         var list1=[
             {'href':'/dsppingtai.html','title':'DSP平台'},
             {'href':'/wangluoshipin.html','title':'网络视频'},
@@ -236,7 +235,7 @@ s.parentNode.insertBefore(mvl, s);
             {'href':'/qitaguanggao.html','title':'城市地标'},
             {'href':'/dianshiguangbo.html','title':'电视广播'},
             {'href':'/guojimeitgg.html','title':'国际媒体'}
-            ];
+        ];
         var list3=[];
         var list4=[];
         var list5=[
@@ -258,7 +257,7 @@ s.parentNode.insertBefore(mvl, s);
         ];
         ullist.push(list0,list1,list2,list3,list4,list5,list6,list7);
         var arrNavlist=$(".navlist");
-       for (var i=0;i<arrNavlist.length;i++){
+        for (var i=0;i<arrNavlist.length;i++){
             if(ullist[i].length==0){
                 continue;
             }
@@ -269,7 +268,7 @@ s.parentNode.insertBefore(mvl, s);
     });
     $(document).scroll(function(e){
         if($(document).scrollTop()>=36){
-           $(".qmtNav").addClass('Jnav');
+            $(".qmtNav").addClass('Jnav');
             $(".qmtNav .logo").addClass("Jlogo");
             $(".qmtNav .nav").addClass("Jnav0");
             $(".qmtTop").css("margin-bottom","85px");
@@ -280,34 +279,34 @@ s.parentNode.insertBefore(mvl, s);
             $(".qmtTop").css("margin-bottom","");
         };
     });
-/*搜索关键词处理0909*/
-function dealKeyword(form) {
-    var strKeyword=form.keyword.value;
-    strKeyword=strKeyword.replace(/\s/g,"");
-    var keywords;
-    var n=0;
-    if(strKeyword.indexOf("哈尔滨")>=0){ n=strKeyword.indexOf("哈尔滨");keywords=cutKeyword(strKeyword,n,3);}
-    else if(strKeyword.indexOf("石家庄")>=0){n=strKeyword.indexOf("石家庄");keywords=cutKeyword(strKeyword,n,3);}
-    else if(strKeyword.indexOf("鄂尔多斯")>=0){n=strKeyword.indexOf("鄂尔多斯");keywords=cutKeyword(strKeyword,n,4);}
-    else if(strKeyword.indexOf("乌鲁木齐")>=0){n=strKeyword.indexOf("乌鲁木齐");keywords=cutKeyword(strKeyword,n,4);}
-    else if(strKeyword.indexOf("呼和浩特")>=0){n=strKeyword.indexOf("呼和浩特");keywords=cutKeyword(strKeyword,n,4);}
-    else if(strKeyword.indexOf("广珠城轨")>=0){n=strKeyword.indexOf("广珠城轨");keywords=cutKeyword(strKeyword,n,4);}
-    else if(strKeyword.indexOf("呼和浩特")>=0){n=strKeyword.indexOf("呼和浩特");keywords=cutKeyword(strKeyword,n,4);}
-    else {n=0;keywords=cutKeyword(strKeyword,n,2);}
-    console.log(keywords);
-    form.keyword.value=keywords;
-    return true;
-}
-function cutKeyword(strKeyword,n,slength) {
-    var strKeyword=strKeyword;
-    var n=n;
-    var slength=slength;
-    strKeyword=strKeyword.substr(n,n+slength)+"%"+strKeyword.substr(n+slength,strKeyword.length);
-    return strKeyword;
-}
+    /*搜索关键词处理0909*/
+    function dealKeyword(form) {
+        var strKeyword=form.keyword.value;
+        strKeyword=strKeyword.replace(/s/g,"");
+        var keywords;
+        var n=0;
+        if(strKeyword.indexOf("哈尔滨")>=0){ n=strKeyword.indexOf("哈尔滨");keywords=cutKeyword(strKeyword,n,3);}
+        else if(strKeyword.indexOf("石家庄")>=0){n=strKeyword.indexOf("石家庄");keywords=cutKeyword(strKeyword,n,3);}
+        else if(strKeyword.indexOf("鄂尔多斯")>=0){n=strKeyword.indexOf("鄂尔多斯");keywords=cutKeyword(strKeyword,n,4);}
+        else if(strKeyword.indexOf("乌鲁木齐")>=0){n=strKeyword.indexOf("乌鲁木齐");keywords=cutKeyword(strKeyword,n,4);}
+        else if(strKeyword.indexOf("呼和浩特")>=0){n=strKeyword.indexOf("呼和浩特");keywords=cutKeyword(strKeyword,n,4);}
+        else if(strKeyword.indexOf("广珠城轨")>=0){n=strKeyword.indexOf("广珠城轨");keywords=cutKeyword(strKeyword,n,4);}
+        else if(strKeyword.indexOf("呼和浩特")>=0){n=strKeyword.indexOf("呼和浩特");keywords=cutKeyword(strKeyword,n,4);}
+        else {n=0;keywords=cutKeyword(strKeyword,n,2);}
+        console.log(keywords);
+        form.keyword.value=keywords;
+        return true;
+    }
+    function cutKeyword(strKeyword,n,slength) {
+        var strKeyword=strKeyword;
+        var n=n;
+        var slength=slength;
+        strKeyword=strKeyword.substr(n,n+slength)+"%"+strKeyword.substr(n+slength,strKeyword.length);
+        return strKeyword;
+    }
 </script>
 <script type="text/javascript">
-function goTop(){
-    $('html,body').animate({'scrollTop':0},600); //滚回顶部的时间，越小滚的速度越快~
-}
+    function goTop(){
+        $('html,body').animate({'scrollTop':0},600); //滚回顶部的时间，越小滚的速度越快~
+    }
 </script>
