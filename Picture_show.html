@@ -27,7 +27,7 @@
 					</div>
 				</div>
 				<div class="mediaTitle fl">
-					<h2>{$title}</h2>
+					<h1>{$title}</h1>
 					<h3>{$keywords}</h3>
 					<p><span>城市地区：{$area}</span></p>
 					<p><span>发布周期：{$species}</span></p>
@@ -378,7 +378,7 @@
 		//导航跟随置顶
 		$(function(){
 		var obj=$('.meA');
-            var num=obj.length;
+                var num=obj.length;
             var top=$('.mediaL').offset().top;
 			$(document).scroll(function(e){
 				 if($(document).scrollTop()>=top){
@@ -398,7 +398,8 @@ follow(num,obj);
             //面包屑导航
 			$('.Jstate').html(" >&nbsp;{$title}");
 		});
-		//点击栏目
+//点击栏目
+
         $('.mediaL h3').click(function(){
             var obj=$('.meA');
             var otitle1=$(this).index();
@@ -435,6 +436,6 @@ follow(num,obj);
                     break;
             }
         });
-
 	</script>
+
 </block>
