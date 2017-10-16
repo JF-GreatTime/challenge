@@ -1,6 +1,6 @@
 <div class="searchBox">
 	<div class="search fl">
-        <form action="/?m=search" method="get">
+        <form action="/?m=search" method="get" autocomplete="off">
         <input name="module" value="picture" type="hidden">
         <input name="m" value="search" type="hidden">
         <input name="a" value="index" type="hidden">
@@ -16,14 +16,18 @@
     </div>
 </div>
 <div class="searchList">
-	<p><span>媒体形式：</span>
-	   <Gr:list name="Mainpro" id="r" key="i" field="title,link" limit="100" order="listorder desc,id desc">
-       {if $i==1}{else}、{/if}<a href="/?module=picture&m=search&a=index&keyword={$r['title']}">{$r.title}</a>
-       </Gr:list>
-	</p>
-	<p><span>城市站点：</span>
-	   <Gr:list name="Mforms" id="r" key="i" field="title,link" limit="100" order="listorder desc,id desc">
-       {if $i==1}{else}、{/if}<a href="/?module=picture&m=search&a=index&keyword={$r['title']}">{$r.title}</a>
-       </Gr:list>
-	</p>
+    <span style="display: inline-block;float: left;">城市站点：</span>
+    <p style="float: left;width: 1000px;">
+        <Gr:list name="Mforms" id="r" key="i" field="title,link" limit="100" order="listorder desc,id desc">
+            {if $i==1}{else}{/if}<a style="display: inline-block;width: 100px;margin-right: 0;" href="/?module=picture&m=search&a=index&keyword={$r['title']}">{$r.title}</a>
+        </Gr:list>
+    </p>
+    <p style="clear: both"></p>
+    <span style="display: inline-block;float: left;">媒体形式：</span>
+    <p style="float: left;width: 1000px;">
+        <Gr:list name="Mainpro" id="r" key="i" field="title,link" limit="100" order="listorder desc,id desc">
+            {if $i==1}{else}{/if}<a style="display: inline-block;width: 100px;margin-right: 0;" href="/?module=picture&m=search&a=index&keyword={$r['title']}">{$r.title}</a>
+        </Gr:list>
+    </p>
+    <p style="clear: both"></p>
 </div>
